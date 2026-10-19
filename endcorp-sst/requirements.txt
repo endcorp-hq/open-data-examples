@@ -1,0 +1,7 @@
+icechunk==2.0.5
+zarr==3.2.1
+xarray==2026.4.0
+dask[array]==2026.3.0
+numpy==2.4.2
+matplotlib==3.10.8
+jupyterlab>=4,<5

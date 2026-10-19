@@ -1,0 +1,2029 @@
+{
+  "schema_version": 1,
+  "status": "pre_release_coverage_not_a_download_manifest",
+  "generated_at": "2026-10-19T13:44:24.961672+00:00",
+  "public_bucket": null,
+  "public_region": null,
+  "public_manifest_url": null,
+  "physical_size_bytes": null,
+  "physical_object_count": null,
+  "array_attribute_scope": "Verbatim stored snapshot metadata, which can contain partial historical repair notes. Use known_source_field_gaps for the explicit known field-level gap ledger; missing_calendar_dates separately records missing whole dates.",
+  "datasets": [
+    {
+      "dataset": "cmc_v2",
+      "date_start": "1991-09-01",
+      "date_end": "2017-03-17",
+      "unique_dates": 9330,
+      "missing_calendar_dates": [],
+      "source_attributes": {
+        "title": "CMC 0.2 deg global sea surface temperature analysis",
+        "references": "Brasnett B. 2008. The impact of satellite retrievals in a global sea-surface-temperature analysis. Q.J.R. Meteorol. Soc., 134, 1745-1760.  DOI: 10.1002/qj.319",
+        "institution": "CMC",
+        "license": "GHRSST protocol describes data use as free and open",
+        "id": "CMC0.2deg-CMC-L4-GLOB-v2.0"
+      },
+      "groups": [
+        {
+          "group": "/",
+          "zarr_format": 3,
+          "date_start": "1991-09-01",
+          "date_end": "2017-03-17",
+          "unique_dates": 9330,
+          "duplicates": {},
+          "arrays": {
+            "analysed_sst": {
+              "dimensions": [
+                "time",
+                "lat",
+                "lon"
+              ],
+              "shape": [
+                9330,
+                901,
+                1800
+              ],
+              "chunks": [
+                5,
+                226,
+                450
+              ],
+              "dtype": "int16",
+              "attributes": {
+                "long_name": "analysed sea surface temperature",
+                "standard_name": "sea_surface_foundation_temperature",
+                "units": "kelvin",
+                "valid_min": -200,
+                "valid_max": 4000,
+                "source": "EUR-L2P-ATS_NR_2P,IN_SITU-ICOADS_BUOYS,IN_SITU-ICOADS_SHIP,ICE-OSISAF-REPROC",
+                "comment": "SST defined at all grid points but no physical meaning is ascribed to values over land",
+                "add_offset": 273.1499938964844,
+                "scale_factor": 0.009999999776482582,
+                "_FillValue": -32768
+              }
+            },
+            "sea_ice_fraction": {
+              "dimensions": [
+                "time",
+                "lat",
+                "lon"
+              ],
+              "shape": [
+                9330,
+                901,
+                1800
+              ],
+              "chunks": [
+                10,
+                226,
+                450
+              ],
+              "dtype": "int8",
+              "attributes": {
+                "long_name": "sea ice area fraction",
+                "standard_name": "sea_ice_area_fraction",
+                "units": "1",
+                "valid_min": 0,
+                "valid_max": 100,
+                "source": "DMSP-F08",
+                "comment": "Sea ice area fraction. No meaning is ascribed to values over land",
+                "add_offset": 0.0,
+                "scale_factor": 0.009999999776482582,
+                "_FillValue": -1
+              }
+            },
+            "analysis_error": {
+              "dimensions": [
+                "time",
+                "lat",
+                "lon"
+              ],
+              "shape": [
+                9330,
+                901,
+                1800
+              ],
+              "chunks": [
+                5,
+                226,
+                450
+              ],
+              "dtype": "int16",
+              "attributes": {
+                "long_name": "estimated error standard deviation of analysed_sst",
+                "units": "kelvin",
+                "valid_min": 0,
+                "valid_max": 32767,
+                "comment": "Error defined at all grid points but no meaning is ascribed to values over land",
+                "add_offset": 0.0,
+                "scale_factor": 0.009999999776482582,
+                "_FillValue": -32768
+              }
+            },
+            "mask": {
+              "dimensions": [
+                "time",
+                "lat",
+                "lon"
+              ],
+              "shape": [
+                9330,
+                901,
+                1800
+              ],
+              "chunks": [
+                10,
+                226,
+                450
+              ],
+              "dtype": "int8",
+              "attributes": {
+                "long_name": "sea/land/lake/ice field composite mask",
+                "valid_min": 0,
+                "valid_max": 31,
+                "flag_masks": [
+                  1,
+                  2,
+                  4,
+                  8,
+                  16
+                ],
+                "flag_meanings": "water land optional_lake_surface sea_ice optional_river_surface",
+                "source": "NAVOCEANO_landmask_v1.0 CMC_icemask",
+                "comment": "Mask can be used to further filter the data",
+                "_FillValue": -1
+              }
+            },
+            "lon": {
+              "dimensions": [
+                "lon"
+              ],
+              "shape": [
+                1800
+              ],
+              "chunks": [
+                1800
+              ],
+              "dtype": "float32",
+              "attributes": {
+                "long_name": "longitude",
+                "standard_name": "longitude",
+                "units": "degrees_east",
+                "valid_min": -180.0,
+                "valid_max": 179.8000030517578,
+                "axis": "X",
+                "comment": " Longitude geographical coordinates,WGS84 projection",
+                "_FillValue": "AAAAAAAA+H8="
+              }
+            },
+            "time": {
+              "dimensions": [
+                "time"
+              ],
+              "shape": [
+                9330
+              ],
+              "chunks": [
+                40
+              ],
+              "dtype": "int32",
+              "attributes": {
+                "long_name": "reference time of sst field",
+                "standard_name": "time",
+                "comment": "",
+                "axis": "T",
+                "units": "seconds since 1981-01-01",
+                "calendar": "proleptic_gregorian"
+              }
+            },
+            "lat": {
+              "dimensions": [
+                "lat"
+              ],
+              "shape": [
+                901
+              ],
+              "chunks": [
+                901
+              ],
+              "dtype": "float32",
+              "attributes": {
+                "long_name": "latitude",
+                "standard_name": "latitude",
+                "units": "degrees_north",
+                "valid_min": -90.0,
+                "valid_max": 90.0,
+                "axis": "Y",
+                "comment": " Latitude geographical coordinates,WGS84 projection",
+                "_FillValue": "AAAAAAAA+H8="
+              }
+            }
+          }
+        }
+      ]
+    },
+    {
+      "dataset": "cmc_v3",
+      "date_start": "2016-01-01",
+      "date_end": "2026-10-17",
+      "unique_dates": 3943,
+      "missing_calendar_dates": [],
+      "source_attributes": {
+        "title": "CMC 0.1 deg global sea surface temperature analysis",
+        "references": "Brasnett B. 2008. The impact of satellite retrievals in a global sea-surface-temperature analysis. Q.J.R. Meteorol. Soc., 134, 1745-1760.  DOI: 10.1002/qj.319",
+        "institution": "CMC",
+        "license": "GHRSST protocol describes data use as free and open",
+        "id": "CMC0.1deg-CMC-L4-GLOB-v3.0"
+      },
+      "groups": [
+        {
+          "group": "/",
+          "zarr_format": 3,
+          "date_start": "2016-01-01",
+          "date_end": "2026-10-17",
+          "unique_dates": 3943,
+          "duplicates": {
+            "2026-03-04": [
+              3715,
+              3716,
+              3717
+            ],
+            "2026-06-14": [
+              3819,
+              3821
+            ],
+            "2026-06-15": [
+              3820,
+              3822
+            ]
+          },
+          "arrays": {
+            "lat": {
+              "dimensions": [
+                "lat"
+              ],
+              "shape": [
+                1801
+              ],
+              "chunks": [
+                1801
+              ],
+              "dtype": "float32",
+              "attributes": {
+                "long_name": "latitude",
+                "standard_name": "latitude",
+                "units": "degrees_north",
+                "valid_min": -90.0,
+                "valid_max": 90.0,
+                "axis": "Y",
+                "comment": " Latitude geographical coordinates,WGS84 projection",
+                "_FillValue": "AAAAAAAA+H8="
+              }
+            },
+            "mask": {
+              "dimensions": [
+                "time",
+                "lat",
+                "lon"
+              ],
+              "shape": [
+                3947,
+                1801,
+                3600
+              ],
+              "chunks": [
+                5,
+                451,
+                900
+              ],
+              "dtype": "int8",
+              "attributes": {
+                "long_name": "sea/land/lake/ice field composite mask",
+                "valid_min": 0,
+                "valid_max": 31,
+                "flag_masks": [
+                  1,
+                  2,
+                  4,
+                  8,
+                  16
+                ],
+                "flag_meanings": "water land optional_lake_surface sea_ice optional_river_surface",
+                "source": "NAVOCEANO_landmask_v1.0 CMC_icemask",
+                "comment": "Mask can be used to further filter the data",
+                "_FillValue": -1
+              }
+            },
+            "preliminary": {
+              "dimensions": [
+                "time"
+              ],
+              "shape": [
+                3947
+              ],
+              "chunks": [
+                2
+              ],
+              "dtype": "int8",
+              "attributes": {
+                "long_name": "Source file is preliminary",
+                "description": "True when the source NetCDF file is a preliminary/NRT daily artifact. A later final daily file for the same time value upserts this flag to false.",
+                "dtype": "bool"
+              }
+            },
+            "lon": {
+              "dimensions": [
+                "lon"
+              ],
+              "shape": [
+                3600
+              ],
+              "chunks": [
+                3600
+              ],
+              "dtype": "float32",
+              "attributes": {
+                "long_name": "longitude",
+                "standard_name": "longitude",
+                "units": "degrees_east",
+                "valid_min": -180.0,
+                "valid_max": 179.89999389648438,
+                "axis": "X",
+                "comment": " Longitude geographical coordinates,WGS84 projection",
+                "_FillValue": "AAAAAAAA+H8="
+              }
+            },
+            "analysed_sst": {
+              "dimensions": [
+                "time",
+                "lat",
+                "lon"
+              ],
+              "shape": [
+                3947,
+                1801,
+                3600
+              ],
+              "chunks": [
+                5,
+                226,
+                900
+              ],
+              "dtype": "int16",
+              "attributes": {
+                "long_name": "analysed sea surface temperature",
+                "standard_name": "sea_surface_foundation_temperature",
+                "units": "kelvin",
+                "valid_min": -200,
+                "valid_max": 4000,
+                "source": "VIIRS_NPP-OSPO-L2P,NAVO-L2P-AVHRR18_G,NAVO-L2P-AVHRRMTA_G,NAVO-L2P-AVHRRMTB_G,NAVO-L2P-AVHRR19_G,REMSS-L3-AMSR2,IN_SITU-GTS_BUOYS,IN_SITU-GTS_SHIP,ICE-CMC",
+                "comment": "SST defined at all grid points but no physical meaning is ascribed to values over land",
+                "add_offset": 273.1499938964844,
+                "scale_factor": 0.009999999776482582,
+                "_FillValue": -32768
+              }
+            },
+            "analysis_error": {
+              "dimensions": [
+                "time",
+                "lat",
+                "lon"
+              ],
+              "shape": [
+                3947,
+                1801,
+                3600
+              ],
+              "chunks": [
+                5,
+                226,
+                900
+              ],
+              "dtype": "int16",
+              "attributes": {
+                "long_name": "estimated error standard deviation of analysed_sst",
+                "units": "kelvin",
+                "valid_min": 0,
+                "valid_max": 32767,
+                "comment": "Error defined at all grid points but no meaning is ascribed to values over land",
+                "add_offset": 0.0,
+                "scale_factor": 0.009999999776482582,
+                "_FillValue": -32768
+              }
+            },
+            "time": {
+              "dimensions": [
+                "time"
+              ],
+              "shape": [
+                3947
+              ],
+              "chunks": [
+                40
+              ],
+              "dtype": "int32",
+              "attributes": {
+                "long_name": "reference time of sst field",
+                "standard_name": "time",
+                "comment": "",
+                "axis": "T",
+                "units": "seconds since 1981-01-01 00:00:00",
+                "calendar": "proleptic_gregorian"
+              }
+            },
+            "sea_ice_fraction": {
+              "dimensions": [
+                "time",
+                "lat",
+                "lon"
+              ],
+              "shape": [
+                3947,
+                1801,
+                3600
+              ],
+              "chunks": [
+                5,
+                451,
+                900
+              ],
+              "dtype": "int8",
+              "attributes": {
+                "long_name": "sea ice area fraction",
+                "standard_name": "sea_ice_area_fraction",
+                "units": "1",
+                "valid_min": 0,
+                "valid_max": 100,
+                "source": "DMSP-F15",
+                "comment": "Sea ice area fraction. No meaning is ascribed to values over land",
+                "add_offset": 0.0,
+                "scale_factor": 0.009999999776482582,
+                "_FillValue": -1
+              }
+            }
+          }
+        }
+      ]
+    },
+    {
+      "dataset": "gamssa",
+      "date_start": "2008-07-23",
+      "date_end": "2026-10-17",
+      "unique_dates": 6654,
+      "missing_calendar_dates": [
+        "2008-08-27",
+        "2014-09-15",
+        "2014-11-06",
+        "2020-09-18",
+        "2023-08-17",
+        "2023-11-22",
+        "2024-12-15"
+      ],
+      "source_attributes": {
+        "id": "GAMSSA_28km-ABOM-L4-GLOB-v01",
+        "title": "GAMSSA v1.0 Analysed daily global low resolution foundation sea surface temperature",
+        "references": "Zhong, Aihong and Helen Beggs (2008) Analysis and Prediction Operations Bulletin No. 77 - Operational Implementation of Global Australian Multi-Sensor Sea Surface Temperature Analysis, Web Document, 2 October 2008.  http://www.bom.gov.au/australia/charts/bulletins/apob77.pdf.  Algorithms and method described in: Beggs H., A. Zhong, G. Warren, O. Alves, G. Brassington and T. Pugh (2011)  RAMSSA  An Operational, High-Resolution, Multi-Sensor Sea Surface Temperature Analysis over the Australian Region, Australian Meteorological and Oceanographic Journal, 61, 1-22.  http://www.bom.gov.au/jshess/papers.php?year=2011",
+        "institution": "ABOM",
+        "license": "GHRSST protocol describes data use as free and open"
+      },
+      "groups": [
+        {
+          "group": "/",
+          "zarr_format": 3,
+          "date_start": "2008-07-23",
+          "date_end": "2026-10-17",
+          "unique_dates": 6654,
+          "duplicates": {},
+          "arrays": {
+            "analysed_sst": {
+              "dimensions": [
+                "time",
+                "lat",
+                "lon"
+              ],
+              "shape": [
+                6654,
+                720,
+                1440
+              ],
+              "chunks": [
+                10,
+                180,
+                360
+              ],
+              "dtype": "int16",
+              "attributes": {
+                "valid_min": -300,
+                "valid_max": 4500,
+                "units": "kelvin",
+                "long_name": "analysed sea surface temperature",
+                "standard_name": "sea_surface_foundation_temperature",
+                "comment": "Optimally interpolated analysis of SST observations.",
+                "source": "ATS_MET_2P-ESA,AMSRE-REMSS,AVHRR17_G-NAVO,AVHRR18_G-NAVO,AVHRRMTA_G-NAVO,IN_SITU-GTS_BUOYS,IN_SITU-GTS_SHIP,GASP-WSP, NCEP-ICE",
+                "coverage_content_type": "physicalMeasurement",
+                "grid_mapping": "crs",
+                "coordinates": "time lat lon",
+                "add_offset": 273.15000000000003,
+                "scale_factor": 0.01,
+                "_FillValue": -32768
+              }
+            },
+            "lon": {
+              "dimensions": [
+                "lon"
+              ],
+              "shape": [
+                1440
+              ],
+              "chunks": [
+                1440
+              ],
+              "dtype": "float32",
+              "attributes": {
+                "long_name": "longitude",
+                "standard_name": "longitude",
+                "axis": "X",
+                "comment": "Longitudes for locating data",
+                "units": "degrees_east",
+                "coverage_content_type": "coordinate",
+                "valid_min": -180.0,
+                "valid_max": 180.0,
+                "_FillValue": "AAAAAAAAnkc="
+              }
+            },
+            "time": {
+              "dimensions": [
+                "time"
+              ],
+              "shape": [
+                6654
+              ],
+              "chunks": [
+                40
+              ],
+              "dtype": "int32",
+              "attributes": {
+                "long_name": "reference time of SST field",
+                "standard_name": "time",
+                "axis": "T",
+                "comment": "Nominal time because observations are from different sources and are made at different times of the day",
+                "coverage_content_type": "coordinate",
+                "_FillValue": -2147483647,
+                "units": "seconds since 1981-01-01 00:00:00",
+                "calendar": "Standard"
+              }
+            },
+            "mask": {
+              "dimensions": [
+                "time",
+                "lat",
+                "lon"
+              ],
+              "shape": [
+                6654,
+                720,
+                1440
+              ],
+              "chunks": [
+                10,
+                180,
+                360
+              ],
+              "dtype": "int8",
+              "attributes": {
+                "valid_min": 1,
+                "valid_max": 8,
+                "long_name": "sea/land/lake/ice field composite mask",
+                "comment": "b0: 1 = grid cell is open sea water, b1: 1 = land is present in this grid cell, b2: 1 = lake surface is present in this grid cell, b3: 1 = sea ice is present in this grid cell, b4-b7: reserved for future grid mask data",
+                "source": "Bureau of Meteorology's legacy 1/12 degree resolution topography (glbtopog) file.",
+                "flag_meanings": "water land optional_lake_surface sea-ice",
+                "grid_mapping": "crs",
+                "flag_masks": [
+                  1,
+                  2,
+                  4,
+                  8
+                ],
+                "coordinates": "time lat lon",
+                "_FillValue": -128
+              }
+            },
+            "lat": {
+              "dimensions": [
+                "lat"
+              ],
+              "shape": [
+                720
+              ],
+              "chunks": [
+                720
+              ],
+              "dtype": "float32",
+              "attributes": {
+                "long_name": "latitude",
+                "standard_name": "latitude",
+                "axis": "Y",
+                "comment": "Latitudes for locating data",
+                "valid_min": -90.0,
+                "valid_max": 90.0,
+                "units": "degrees_north",
+                "coverage_content_type": "coordinate",
+                "_FillValue": "AAAAAAAAnkc="
+              }
+            },
+            "analysis_error": {
+              "dimensions": [
+                "time",
+                "lat",
+                "lon"
+              ],
+              "shape": [
+                6654,
+                720,
+                1440
+              ],
+              "chunks": [
+                10,
+                180,
+                360
+              ],
+              "dtype": "int16",
+              "attributes": {
+                "valid_min": 0,
+                "valid_max": 32765,
+                "units": "kelvin",
+                "long_name": "estimated error standard deviation of analysed_sst",
+                "comment": "Calculated as analysis field error in OI analysis system and a function of the age and estimated standard deviation of all observations used to form analysed_sst value. See Beggs et al (2011) in http://www.bom.gov.au/jshess/papers.php?year=2011.",
+                "coverage_content_type": "auxiliaryInformation",
+                "grid_mapping": "crs",
+                "coordinates": "time lat lon",
+                "add_offset": 0.0,
+                "scale_factor": 0.01,
+                "_FillValue": -32768
+              }
+            },
+            "sea_ice_fraction": {
+              "dimensions": [
+                "time",
+                "lat",
+                "lon"
+              ],
+              "shape": [
+                6654,
+                720,
+                1440
+              ],
+              "chunks": [
+                10,
+                180,
+                360
+              ],
+              "dtype": "int8",
+              "attributes": {
+                "valid_min": 0,
+                "valid_max": 100,
+                "units": "1",
+                "long_name": "sea ice area fraction",
+                "standard_name": "sea_ice_area_fraction",
+                "comment": "Fractional sea ice cover from NCEP-ICE product (Grumbine, 1996) .",
+                "source": "SSMI-NCEP-Analysis-ICE-5min",
+                "coverage_content_type": "auxiliaryInformation",
+                "grid_mapping": "crs",
+                "coordinates": "time lat lon",
+                "add_offset": 0.0,
+                "scale_factor": 0.01,
+                "_FillValue": -128,
+                "source_missing_dates": [
+                  "2026-09-23"
+                ],
+                "axis_repair": {
+                  "issue": 1163,
+                  "original_snapshot": "HQTCTZGRVAR41MKDY7A0",
+                  "missing_source_variable": "sea_ice_fraction",
+                  "missing_date": "2026-09-23"
+                }
+              }
+            },
+            "preliminary": {
+              "dimensions": [
+                "time"
+              ],
+              "shape": [
+                6654
+              ],
+              "chunks": [
+                9
+              ],
+              "dtype": "int8",
+              "attributes": {
+                "long_name": "Source file is preliminary",
+                "description": "True when the source NetCDF file is a preliminary/NRT daily artifact. A later final daily file for the same time value upserts this flag to false.",
+                "dtype": "bool"
+              }
+            },
+            "crs": {
+              "dimensions": [
+                "time"
+              ],
+              "shape": [
+                6654
+              ],
+              "chunks": [
+                40
+              ],
+              "dtype": "int32",
+              "attributes": {
+                "long_name": "coordinate reference system",
+                "grid_mapping_name": "latitude_longitude",
+                "semi_major_axis": 6379137.0,
+                "inverse_flattening": 298.257223563,
+                "epsg_code": "EPSG:4326"
+              }
+            }
+          }
+        }
+      ],
+      "known_source_field_gaps": {
+        "sea_ice_fraction": {
+          "dates": [
+            "2026-03-26",
+            "2026-03-27",
+            "2026-03-28",
+            "2026-03-29",
+            "2026-03-30",
+            "2026-05-06",
+            "2026-09-23"
+          ],
+          "stored_fill_value": -128,
+          "decoded_representation": "CF missing value",
+          "evidence": "Source-file inspection and canonical repair read-back, 2026-10-19. All seven known source omissions are included; copied array attributes retain the earlier September-only repair note."
+        }
+      }
+    },
+    {
+      "dataset": "gpb_5km",
+      "date_start": "2014-06-02",
+      "date_end": "2026-10-17",
+      "unique_dates": 4401,
+      "missing_calendar_dates": [
+        "2014-06-13",
+        "2014-06-14",
+        "2014-06-15",
+        "2014-07-22",
+        "2014-10-20",
+        "2014-10-21",
+        "2014-10-31",
+        "2015-04-24",
+        "2015-05-15",
+        "2015-10-16",
+        "2015-10-20",
+        "2015-11-05",
+        "2015-12-15",
+        "2016-02-16",
+        "2016-10-13",
+        "2016-10-29",
+        "2016-11-02",
+        "2016-11-05",
+        "2017-02-01",
+        "2018-02-08",
+        "2018-03-06",
+        "2018-03-12",
+        "2018-03-17",
+        "2019-02-26",
+        "2019-02-27",
+        "2019-02-28",
+        "2020-05-06",
+        "2020-05-07",
+        "2020-06-11",
+        "2020-10-11",
+        "2020-10-19",
+        "2020-10-22",
+        "2021-05-06",
+        "2021-11-10",
+        "2021-11-11",
+        "2021-11-18",
+        "2022-01-17",
+        "2022-05-27",
+        "2022-05-28",
+        "2022-05-29",
+        "2022-05-30",
+        "2022-05-31",
+        "2022-06-01",
+        "2022-06-02",
+        "2022-06-03",
+        "2022-06-04",
+        "2022-06-05",
+        "2022-07-13",
+        "2022-08-28",
+        "2022-08-29",
+        "2022-08-30",
+        "2022-08-31",
+        "2022-09-01",
+        "2022-09-02",
+        "2022-09-23",
+        "2022-10-09",
+        "2022-10-19",
+        "2022-10-30",
+        "2022-12-23",
+        "2023-11-20",
+        "2023-11-22",
+        "2023-12-19",
+        "2023-12-20",
+        "2023-12-21",
+        "2023-12-22",
+        "2023-12-29",
+        "2023-12-30",
+        "2024-01-02",
+        "2024-04-01",
+        "2024-06-28",
+        "2024-07-02",
+        "2024-07-03",
+        "2024-08-06",
+        "2024-08-07",
+        "2024-11-13",
+        "2024-11-14",
+        "2024-11-15",
+        "2024-11-16",
+        "2024-11-27",
+        "2024-11-29",
+        "2024-11-30",
+        "2024-12-06",
+        "2024-12-07",
+        "2024-12-08",
+        "2025-01-30",
+        "2025-01-31",
+        "2025-02-01",
+        "2025-02-02",
+        "2025-02-03",
+        "2025-02-05",
+        "2025-02-06",
+        "2025-02-07",
+        "2025-02-08",
+        "2025-02-09",
+        "2025-02-10",
+        "2025-02-11",
+        "2025-02-12",
+        "2025-02-13",
+        "2025-08-21",
+        "2025-08-22",
+        "2025-08-23",
+        "2025-08-24",
+        "2025-08-25",
+        "2025-08-26",
+        "2025-08-27",
+        "2025-08-28",
+        "2025-08-29",
+        "2025-08-30",
+        "2025-08-31",
+        "2025-09-01",
+        "2025-09-02",
+        "2025-09-03",
+        "2025-09-04",
+        "2025-09-05",
+        "2025-09-06",
+        "2025-09-07",
+        "2025-09-08",
+        "2025-09-09",
+        "2025-09-10",
+        "2025-09-11"
+      ],
+      "source_attributes": {
+        "title": "Analysed blended sea surface temperature over the global ocean using night only input data",
+        "references": "Fieguth,P.W. et al. \"Mapping Mediterranean altimeter data with a multiresolution optimal interpolation algorithm\", J. Atmos. Ocean Tech, 15 (2): 535-546, 1998.     Fieguth, P. Multiply-Rooted Multiscale Models for Large-Scale Estimation, IEEE Image Processing, 10(11), 1676-1686, 2001.     Khellah, F., P.W. Fieguth, M.J. Murray and M.R. Allen, \"Statistical Processing of Large Image Sequences\", IEEE Transactions on Geoscience and Remote Sensing, 12 (1), 80-93, 2005.",
+        "institution": "Office of Satellite Products and Operations",
+        "license": "GHRSST protocol describes data use as free and open",
+        "id": "Geo_Polar_Blended_Night-OSPO-L4-GLOB-v1.0"
+      },
+      "groups": [
+        {
+          "group": "/",
+          "zarr_format": 3,
+          "date_start": "2014-06-02",
+          "date_end": "2026-10-17",
+          "unique_dates": 4401,
+          "duplicates": {},
+          "arrays": {
+            "analysed_sst": {
+              "dimensions": [
+                "time",
+                "lat",
+                "lon"
+              ],
+              "shape": [
+                4401,
+                3600,
+                7200
+              ],
+              "chunks": [
+                1,
+                600,
+                1200
+              ],
+              "dtype": "int16",
+              "attributes": {
+                "long_name": "analysed sea surface temperature",
+                "standard_name": "sea_surface_foundation_temperature",
+                "units": "Kelvin",
+                "valid_min": -200,
+                "valid_max": 3500,
+                "reference": "Fieguth,P.W. et al. \"Mapping Mediterranean altimeter data with a multiresolution optimal interpolation algorithm\", J. Atmos. Ocean Tech, 15 (2): 535-546, 1998.     Fieguth, P. Multiply-Rooted Multiscale Models for Large-Scale Estimation, IEEE Image Processing, 10(11), 1676-1686, 2001.     Khellah, F., P.W. Fieguth, M.J. Murray and M.R. Allen, \"Statistical Processing of Large Image Sequences\", IEEE Transactions on Geoscience and Remote Sensing, 12 (1), 80-93, 2005.",
+                "source": "OSPO-ACSPO_N19_GAC, OSPO-ACSPO_METOPB_FRAC, OSPO-GOES13_SST_L3,OSPO-GOES15_SST_L3, OSPO-METEOSAT10_SST_L3, OSPO-MTSAT2_SST_L3",
+                "comment": "nighttime analysed SST for each ocean grid point",
+                "coordinates": "lon lat",
+                "add_offset": 273.1499938964844,
+                "scale_factor": 0.009999999776482582,
+                "_FillValue": -32768
+              }
+            },
+            "analysis_error": {
+              "dimensions": [
+                "time",
+                "lat",
+                "lon"
+              ],
+              "shape": [
+                4401,
+                3600,
+                7200
+              ],
+              "chunks": [
+                1,
+                600,
+                1200
+              ],
+              "dtype": "int16",
+              "attributes": {
+                "long_name": "estimated error standard deviation of analysed_sst",
+                "units": "Kelvin",
+                "valid_min": 0,
+                "valid_max": 500,
+                "comment": "Estimate of internal analysis accuracy",
+                "coordinates": "lon lat",
+                "add_offset": 273.1499938964844,
+                "scale_factor": 0.009999999776482582,
+                "_FillValue": -32768
+              }
+            },
+            "time": {
+              "dimensions": [
+                "time"
+              ],
+              "shape": [
+                4401
+              ],
+              "chunks": [
+                8
+              ],
+              "dtype": "int32",
+              "attributes": {
+                "long_name": "reference time of sst field",
+                "standard_name": "time",
+                "axis": "T",
+                "comment": "Nominal time of Level 4 analysis",
+                "units": "seconds since 1981-01-01 00:00:00",
+                "calendar": "Gregorian"
+              }
+            },
+            "lat": {
+              "dimensions": [
+                "lat"
+              ],
+              "shape": [
+                3600
+              ],
+              "chunks": [
+                3600
+              ],
+              "dtype": "float32",
+              "attributes": {
+                "long_name": "latitude",
+                "standard_name": "latitude",
+                "units": "degrees_north",
+                "axis": "Y",
+                "valid_min": -90.0,
+                "valid_max": 90.0,
+                "comment": "equirectangular projection",
+                "_FillValue": "AAAAAAAA+H8="
+              }
+            },
+            "preliminary": {
+              "dimensions": [
+                "time"
+              ],
+              "shape": [
+                4401
+              ],
+              "chunks": [
+                8
+              ],
+              "dtype": "int8",
+              "attributes": {
+                "long_name": "Source file is preliminary",
+                "description": "True when the source NetCDF file is a preliminary/NRT daily artifact. A later final daily file for the same time value upserts this flag to false.",
+                "dtype": "bool"
+              }
+            },
+            "sea_ice_fraction": {
+              "dimensions": [
+                "time",
+                "lat",
+                "lon"
+              ],
+              "shape": [
+                4401,
+                3600,
+                7200
+              ],
+              "chunks": [
+                1,
+                600,
+                1200
+              ],
+              "dtype": "int8",
+              "attributes": {
+                "long_name": "sea ice fraction",
+                "standard_name": "sea_ice_area_fraction",
+                "units": "1",
+                "valid_min": 0,
+                "valid_max": 100,
+                "source": "NCEP 1/12th degree ice mask",
+                "comment": " Percentage of ice",
+                "coordinates": "lon lat",
+                "add_offset": 0.0,
+                "scale_factor": 0.009999999776482582,
+                "_FillValue": -128
+              }
+            },
+            "lon": {
+              "dimensions": [
+                "lon"
+              ],
+              "shape": [
+                7200
+              ],
+              "chunks": [
+                7200
+              ],
+              "dtype": "float32",
+              "attributes": {
+                "long_name": "longitude",
+                "standard_name": "longitude",
+                "units": "degrees_east",
+                "axis": "X",
+                "valid_min": -180.0,
+                "valid_max": 180.0,
+                "comment": "equirectangular projection",
+                "_FillValue": "AAAAAAAA+H8="
+              }
+            },
+            "mask": {
+              "dimensions": [
+                "time",
+                "lat",
+                "lon"
+              ],
+              "shape": [
+                4401,
+                3600,
+                7200
+              ],
+              "chunks": [
+                1,
+                600,
+                1200
+              ],
+              "dtype": "int8",
+              "attributes": {
+                "long_name": "sea/land/ice bit mask",
+                "standard_name": "sea_land_ice_bit_mask",
+                "flag_values": [
+                  1,
+                  2,
+                  4
+                ],
+                "flag_meanings": "water land ice",
+                "valid_min": 1,
+                "valid_max": 4,
+                "source": " NCEP 1/12th degree ice mask, OSTIA land mask",
+                "comment": "b0: 1=grid cell is water, b1: 1=grid cell is land, b2: 1=grid cell is ice",
+                "coordinates": "lon lat",
+                "_FillValue": 0
+              }
+            }
+          }
+        }
+      ]
+    },
+    {
+      "dataset": "oisst",
+      "date_start": "1981-09-01",
+      "date_end": "2026-10-17",
+      "unique_dates": 16483,
+      "missing_calendar_dates": [],
+      "source_attributes": {
+        "title": "NOAA/NCEI 1/4 Degree Daily Optimum Interpolation Sea Surface Temperature (OISST) Analysis, Version 2.1 - Inter",
+        "references": "Reynolds, et al.(2007) Daily High-Resolution-Blended Analyses for Sea Surface Temperature (available at https://doi.org/10.1175/2007JCLI1824.1). Banzon, et al.(2016) A long-term record of blended satellite and in situ sea-surface temperature for climate monitoring, modeling and environmental studies (available at https://doi.org/10.5194/essd-8-165-2016). Huang et al. (2020) Improvements of the Daily Optimum Interpolation Sea Surface Temperature (DOISST) Version v02r01, submitted.Climatology is based on 1971-2000 OI.v2 SST. Satellite data: Pathfinder AVHRR SST, Navy AVHRR SST, and NOAA ACSPO SST. Ice data: NCEP Ice and GSFC Ice.",
+        "id": "oisst-avhrr-v02r01.20261017_preliminary.nc",
+        "institution": "NOAA/National Centers for Environmental Information"
+      },
+      "groups": [
+        {
+          "group": "/",
+          "zarr_format": 3,
+          "date_start": "1981-09-01",
+          "date_end": "2026-10-17",
+          "unique_dates": 16483,
+          "duplicates": {
+            "2026-02-17": [
+              16240,
+              16241
+            ]
+          },
+          "arrays": {
+            "err": {
+              "dimensions": [
+                "time",
+                "zlev",
+                "lat",
+                "lon"
+              ],
+              "shape": [
+                16484,
+                1,
+                720,
+                1440
+              ],
+              "chunks": [
+                10,
+                1,
+                180,
+                360
+              ],
+              "dtype": "int16",
+              "attributes": {
+                "long_name": "Estimated error standard deviation of analysed_sst",
+                "units": "Celsius",
+                "valid_min": 0,
+                "valid_max": 1000,
+                "add_offset": 0.0,
+                "scale_factor": 0.009999999776482582,
+                "_FillValue": -999
+              }
+            },
+            "anom": {
+              "dimensions": [
+                "time",
+                "zlev",
+                "lat",
+                "lon"
+              ],
+              "shape": [
+                16484,
+                1,
+                720,
+                1440
+              ],
+              "chunks": [
+                10,
+                1,
+                180,
+                360
+              ],
+              "dtype": "int16",
+              "attributes": {
+                "long_name": "Daily sea surface temperature anomalies",
+                "valid_min": -1200,
+                "valid_max": 1200,
+                "units": "Celsius",
+                "add_offset": 0.0,
+                "scale_factor": 0.009999999776482582,
+                "_FillValue": -999
+              }
+            },
+            "lon": {
+              "dimensions": [
+                "lon"
+              ],
+              "shape": [
+                1440
+              ],
+              "chunks": [
+                1440
+              ],
+              "dtype": "float32",
+              "attributes": {
+                "long_name": "Longitude",
+                "units": "degrees_east",
+                "grids": "Uniform grid from 0.125 to 359.875 by 0.25",
+                "_FillValue": "AAAAAAAA+H8="
+              }
+            },
+            "preliminary": {
+              "dimensions": [
+                "time"
+              ],
+              "shape": [
+                16484
+              ],
+              "chunks": [
+                1024
+              ],
+              "dtype": "bool",
+              "attributes": {
+                "long_name": "Source file is preliminary",
+                "description": "True when the source NetCDF file is a preliminary/NRT daily artifact. A later final daily file for the same time value upserts this flag to false."
+              }
+            },
+            "ice": {
+              "dimensions": [
+                "time",
+                "zlev",
+                "lat",
+                "lon"
+              ],
+              "shape": [
+                16484,
+                1,
+                720,
+                1440
+              ],
+              "chunks": [
+                10,
+                1,
+                180,
+                360
+              ],
+              "dtype": "int16",
+              "attributes": {
+                "long_name": "Sea ice concentration",
+                "units": "%",
+                "valid_min": 0,
+                "valid_max": 100,
+                "add_offset": 0.0,
+                "scale_factor": 0.009999999776482582,
+                "_FillValue": -999
+              }
+            },
+            "sst": {
+              "dimensions": [
+                "time",
+                "zlev",
+                "lat",
+                "lon"
+              ],
+              "shape": [
+                16484,
+                1,
+                720,
+                1440
+              ],
+              "chunks": [
+                10,
+                1,
+                180,
+                360
+              ],
+              "dtype": "int16",
+              "attributes": {
+                "long_name": "Daily sea surface temperature",
+                "units": "Celsius",
+                "valid_min": -300,
+                "valid_max": 4500,
+                "add_offset": 0.0,
+                "scale_factor": 0.009999999776482582,
+                "_FillValue": -999
+              }
+            },
+            "time": {
+              "dimensions": [
+                "time"
+              ],
+              "shape": [
+                16484
+              ],
+              "chunks": [
+                40
+              ],
+              "dtype": "float32",
+              "attributes": {
+                "long_name": "Center time of the day",
+                "_FillValue": "AAAAAAAA+H8=",
+                "units": "days since 1978-01-01 12:00:00",
+                "calendar": "proleptic_gregorian"
+              }
+            },
+            "lat": {
+              "dimensions": [
+                "lat"
+              ],
+              "shape": [
+                720
+              ],
+              "chunks": [
+                720
+              ],
+              "dtype": "float32",
+              "attributes": {
+                "long_name": "Latitude",
+                "units": "degrees_north",
+                "grids": "Uniform grid from -89.875 to 89.875 by 0.25",
+                "_FillValue": "AAAAAAAA+H8="
+              }
+            },
+            "zlev": {
+              "dimensions": [
+                "zlev"
+              ],
+              "shape": [
+                1
+              ],
+              "chunks": [
+                1
+              ],
+              "dtype": "float32",
+              "attributes": {
+                "long_name": "Sea surface height",
+                "units": "meters",
+                "actual_range": "0, 0",
+                "positive": "down",
+                "_FillValue": "AAAAAAAA+H8="
+              }
+            }
+          }
+        }
+      ]
+    },
+    {
+      "dataset": "ostia",
+      "date_start": "2007-01-01",
+      "date_end": "2026-10-17",
+      "unique_dates": 7206,
+      "missing_calendar_dates": [
+        "2023-12-19",
+        "2024-05-10",
+        "2024-05-11",
+        "2024-05-12",
+        "2024-05-13",
+        "2024-08-09",
+        "2024-08-10",
+        "2024-08-11",
+        "2024-08-12",
+        "2024-08-13",
+        "2024-08-14",
+        "2024-11-08",
+        "2024-11-09",
+        "2024-11-10",
+        "2024-11-11",
+        "2024-11-12",
+        "2024-11-13",
+        "2025-05-09",
+        "2025-05-10",
+        "2025-05-11",
+        "2025-08-08",
+        "2025-08-09",
+        "2025-08-10",
+        "2026-06-01"
+      ],
+      "source_attributes": {
+        "title": "Analysed foundation sea surface temperature over the global ocean",
+        "references": "Donlon, C.J., Martin, M., Stark, J.D., Roberts-Jones, J., Fiedler, E., Wimmer, W., 2011. The Operational Sea Surface Temperature and Sea Ice Analysis (OSTIA). Remote Sensing of the Environment, 116",
+        "institution": "UKMO",
+        "license": "These data are available free of charge under the GMES data policy",
+        "id": "UKMO-L4HRfnd_GLOB-OSTIA"
+      },
+      "groups": [
+        {
+          "group": "/",
+          "zarr_format": 3,
+          "date_start": "2007-01-01",
+          "date_end": "2007-02-09",
+          "unique_dates": 40,
+          "duplicates": {},
+          "arrays": {
+            "analysed_sst": {
+              "dimensions": [
+                "time",
+                "lat",
+                "lon"
+              ],
+              "shape": [
+                40,
+                3600,
+                7200
+              ],
+              "chunks": [
+                3,
+                450,
+                900
+              ],
+              "dtype": "int16",
+              "attributes": {
+                "long_name": "analysed sea surface temperature",
+                "standard_name": "sea_surface_foundation_temperature",
+                "units": "kelvin",
+                "valid_min": -300,
+                "valid_max": 4500,
+                "source": "REMSS-L2P-AMSRE, UPA-L2P-ATS_NR_2P, NAVO-L2P-AVHRR18_G, NAVO-L2P-AVHRR19_G, EUR-L2P-AVHRR_METOP_A, SEVIRI_SST-OSISAF-L3C-v1.0, REMSS_L2P-TMI, GOES13-OSISAF-L3C-v1.0",
+                "reference": "C.J. Donlon, M. Martin, J.D. Stark, J. Roberts-Jones, E. Fiedler, W. Wimmer. The operational sea surface temperature and sea ice analysis (OSTIA) system. Remote Sensing Environ., 116 (2012), pp. 140u2013158 http://dx.doi.org/10.1016/j.rse.2010.10.017",
+                "comment": " OSTIA foundation SST",
+                "coordinates": "lon lat",
+                "add_offset": 273.1499938964844,
+                "scale_factor": 0.009999999776482582,
+                "_FillValue": -32768
+              }
+            },
+            "analysis_error": {
+              "dimensions": [
+                "time",
+                "lat",
+                "lon"
+              ],
+              "shape": [
+                40,
+                3600,
+                7200
+              ],
+              "chunks": [
+                3,
+                450,
+                900
+              ],
+              "dtype": "int16",
+              "attributes": {
+                "long_name": "estimated error standard deviation of analysed_sst",
+                "units": "kelvin",
+                "valid_min": 0,
+                "valid_max": 32767,
+                "comment": " OSTIA foundation SST analysis standard deviation error",
+                "standard_name": "sea_surface_foundation_temperature standard_error",
+                "coordinates": "lon lat",
+                "add_offset": 0.0,
+                "scale_factor": 0.009999999776482582,
+                "_FillValue": -32768
+              }
+            },
+            "time": {
+              "dimensions": [
+                "time"
+              ],
+              "shape": [
+                40
+              ],
+              "chunks": [
+                40
+              ],
+              "dtype": "int32",
+              "attributes": {
+                "long_name": "reference time of sst field",
+                "standard_name": "time",
+                "axis": "T",
+                "comment": " ",
+                "units": "seconds since 1981-01-01",
+                "calendar": "proleptic_gregorian"
+              }
+            },
+            "lat": {
+              "dimensions": [
+                "lat"
+              ],
+              "shape": [
+                3600
+              ],
+              "chunks": [
+                3600
+              ],
+              "dtype": "float32",
+              "attributes": {
+                "long_name": "latitude",
+                "standard_name": "latitude",
+                "axis": "Y",
+                "units": "degrees_north",
+                "valid_min": -90.0,
+                "valid_max": 90.0,
+                "comment": " Latitude geographical coordinates,WGS84 projection",
+                "_FillValue": "AAAAAAAA+H8="
+              }
+            },
+            "lon": {
+              "dimensions": [
+                "lon"
+              ],
+              "shape": [
+                7200
+              ],
+              "chunks": [
+                7200
+              ],
+              "dtype": "float32",
+              "attributes": {
+                "long_name": "longitude",
+                "standard_name": "longitude",
+                "axis": "X",
+                "units": "degrees_east",
+                "valid_min": -180.0,
+                "valid_max": 180.0,
+                "comment": " Longitude geographical coordinates,WGS84 projection",
+                "_FillValue": "AAAAAAAA+H8="
+              }
+            },
+            "mask": {
+              "dimensions": [
+                "time",
+                "lat",
+                "lon"
+              ],
+              "shape": [
+                40,
+                3600,
+                7200
+              ],
+              "chunks": [
+                5,
+                450,
+                900
+              ],
+              "dtype": "int8",
+              "attributes": {
+                "long_name": "land sea ice lake bit mask",
+                "flag_meanings": "water land optional_lake_surface sea_ice optional_river_surface",
+                "comment": " Land/ open ocean/ sea ice /lake mask",
+                "valid_min": 1,
+                "valid_max": 31,
+                "flag_masks": [
+                  1,
+                  2,
+                  4,
+                  8,
+                  16
+                ],
+                "source": "NAVOCEANO_landmask_v1.0 EUMETSAT_OSI-SAF_icemask ARCLake_lakemask",
+                "coordinates": "lon lat",
+                "_FillValue": -128
+              }
+            },
+            "sea_ice_fraction": {
+              "dimensions": [
+                "time",
+                "lat",
+                "lon"
+              ],
+              "shape": [
+                40,
+                3600,
+                7200
+              ],
+              "chunks": [
+                5,
+                450,
+                900
+              ],
+              "dtype": "int8",
+              "attributes": {
+                "long_name": "sea ice area fraction",
+                "standard_name": "sea_ice_area_fraction",
+                "units": "1",
+                "valid_min": 0,
+                "valid_max": 100,
+                "source": "EUMETSAT OSI-SAF",
+                "comment": " Sea ice area fraction",
+                "coordinates": "lon lat",
+                "add_offset": 0.0,
+                "scale_factor": 0.009999999776482582,
+                "_FillValue": -128
+              }
+            }
+          }
+        },
+        {
+          "group": "grid_7200x3600_ad7be40981fc",
+          "zarr_format": 3,
+          "date_start": "2007-02-17",
+          "date_end": "2026-10-17",
+          "unique_dates": 7102,
+          "duplicates": {
+            "2026-06-02": [
+              6964,
+              6969
+            ],
+            "2026-06-03": [
+              6965,
+              6970
+            ]
+          },
+          "arrays": {
+            "analysed_sst": {
+              "dimensions": [
+                "time",
+                "lat",
+                "lon"
+              ],
+              "shape": [
+                7104,
+                3600,
+                7200
+              ],
+              "chunks": [
+                1,
+                450,
+                900
+              ],
+              "dtype": "int16",
+              "attributes": {
+                "long_name": "analysed sea surface temperature",
+                "standard_name": "sea_surface_foundation_temperature",
+                "units": "kelvin",
+                "valid_min": -300,
+                "valid_max": 4500,
+                "source": "REMSS-L2P-AMSRE, UPA-L2P-ATS_NR_2P, NAVO-L2P-AVHRR18_G, NAVO-L2P-AVHRR19_G, EUR-L2P-AVHRR_METOP_A, SEVIRI_SST-OSISAF-L3C-v1.0, REMSS_L2P-TMI, GOES13-OSISAF-L3C-v1.0",
+                "reference": "C.J. Donlon, M. Martin, J.D. Stark, J. Roberts-Jones, E. Fiedler, W. Wimmer. The operational sea surface temperature and sea ice analysis (OSTIA) system. Remote Sensing Environ., 116 (2012), pp. 140u2013158 http://dx.doi.org/10.1016/j.rse.2010.10.017",
+                "comment": " OSTIA foundation SST",
+                "coordinates": "lon lat",
+                "add_offset": 273.1499938964844,
+                "scale_factor": 0.009999999776482582,
+                "_FillValue": -32768
+              }
+            },
+            "analysis_error": {
+              "dimensions": [
+                "time",
+                "lat",
+                "lon"
+              ],
+              "shape": [
+                7104,
+                3600,
+                7200
+              ],
+              "chunks": [
+                1,
+                450,
+                900
+              ],
+              "dtype": "int16",
+              "attributes": {
+                "long_name": "estimated error standard deviation of analysed_sst",
+                "units": "kelvin",
+                "valid_min": 0,
+                "valid_max": 32767,
+                "comment": " OSTIA foundation SST analysis standard deviation error",
+                "standard_name": "sea_surface_foundation_temperature standard_error",
+                "coordinates": "lon lat",
+                "add_offset": 0.0,
+                "scale_factor": 0.009999999776482582,
+                "_FillValue": -32768
+              }
+            },
+            "mask": {
+              "dimensions": [
+                "time",
+                "lat",
+                "lon"
+              ],
+              "shape": [
+                7104,
+                3600,
+                7200
+              ],
+              "chunks": [
+                1,
+                450,
+                1800
+              ],
+              "dtype": "int8",
+              "attributes": {
+                "long_name": "land sea ice lake bit mask",
+                "flag_meanings": "water land optional_lake_surface sea_ice optional_river_surface",
+                "comment": " Land/ open ocean/ sea ice /lake mask",
+                "valid_min": 1,
+                "valid_max": 31,
+                "flag_masks": [
+                  1,
+                  2,
+                  4,
+                  8,
+                  16
+                ],
+                "source": "NAVOCEANO_landmask_v1.0 EUMETSAT_OSI-SAF_icemask ARCLake_lakemask",
+                "coordinates": "lon lat",
+                "_FillValue": -128
+              }
+            },
+            "lon": {
+              "dimensions": [
+                "lon"
+              ],
+              "shape": [
+                7200
+              ],
+              "chunks": [
+                7200
+              ],
+              "dtype": "float32",
+              "attributes": {
+                "long_name": "longitude",
+                "standard_name": "longitude",
+                "axis": "X",
+                "units": "degrees_east",
+                "valid_min": -180.0,
+                "valid_max": 180.0,
+                "comment": " Longitude geographical coordinates,WGS84 projection",
+                "_FillValue": "AAAAAAAA+H8="
+              }
+            },
+            "sea_ice_fraction": {
+              "dimensions": [
+                "time",
+                "lat",
+                "lon"
+              ],
+              "shape": [
+                7104,
+                3600,
+                7200
+              ],
+              "chunks": [
+                1,
+                450,
+                1800
+              ],
+              "dtype": "int8",
+              "attributes": {
+                "long_name": "sea ice area fraction",
+                "standard_name": "sea_ice_area_fraction",
+                "units": "1",
+                "valid_min": 0,
+                "valid_max": 100,
+                "source": "EUMETSAT OSI-SAF",
+                "comment": " Sea ice area fraction",
+                "coordinates": "lon lat",
+                "add_offset": 0.0,
+                "scale_factor": 0.009999999776482582,
+                "_FillValue": -128
+              }
+            },
+            "preliminary": {
+              "dimensions": [
+                "time"
+              ],
+              "shape": [
+                7104
+              ],
+              "chunks": [
+                1
+              ],
+              "dtype": "int8",
+              "attributes": {
+                "long_name": "Source file is preliminary",
+                "description": "True when the source NetCDF file is a preliminary/NRT daily artifact. A later final daily file for the same time value upserts this flag to false.",
+                "dtype": "bool"
+              }
+            },
+            "lat": {
+              "dimensions": [
+                "lat"
+              ],
+              "shape": [
+                3600
+              ],
+              "chunks": [
+                3600
+              ],
+              "dtype": "float32",
+              "attributes": {
+                "long_name": "latitude",
+                "standard_name": "latitude",
+                "axis": "Y",
+                "units": "degrees_north",
+                "valid_min": -90.0,
+                "valid_max": 90.0,
+                "comment": " Latitude geographical coordinates,WGS84 projection",
+                "_FillValue": "AAAAAAAA+H8="
+              }
+            },
+            "time": {
+              "dimensions": [
+                "time"
+              ],
+              "shape": [
+                7104
+              ],
+              "chunks": [
+                1
+              ],
+              "dtype": "int32",
+              "attributes": {
+                "long_name": "reference time of sst field",
+                "standard_name": "time",
+                "axis": "T",
+                "comment": " ",
+                "units": "seconds since 1981-01-01 00:00:00",
+                "calendar": "proleptic_gregorian"
+              }
+            }
+          }
+        },
+        {
+          "group": "grid_7200x3600_bd12fc8a4ed2",
+          "zarr_format": 3,
+          "date_start": "2007-01-01",
+          "date_end": "2007-04-15",
+          "unique_dates": 104,
+          "duplicates": {},
+          "arrays": {
+            "analysis_error": {
+              "dimensions": [
+                "time",
+                "lat",
+                "lon"
+              ],
+              "shape": [
+                104,
+                3600,
+                7200
+              ],
+              "chunks": [
+                3,
+                450,
+                900
+              ],
+              "dtype": "int16",
+              "attributes": {
+                "long_name": "estimated error standard deviation of analysed_sst",
+                "units": "kelvin",
+                "valid_min": 0,
+                "valid_max": 32767,
+                "comment": " OSTIA foundation SST analysis standard deviation error",
+                "standard_name": "sea_surface_foundation_temperature standard_error",
+                "coordinates": "lon lat",
+                "add_offset": 0.0,
+                "scale_factor": 0.009999999776482582,
+                "_FillValue": -32768
+              }
+            },
+            "sea_ice_fraction": {
+              "dimensions": [
+                "time",
+                "lat",
+                "lon"
+              ],
+              "shape": [
+                104,
+                3600,
+                7200
+              ],
+              "chunks": [
+                5,
+                450,
+                900
+              ],
+              "dtype": "int8",
+              "attributes": {
+                "long_name": "sea ice area fraction",
+                "standard_name": "sea_ice_area_fraction",
+                "units": "1",
+                "valid_min": 0,
+                "valid_max": 100,
+                "source": "EUMETSAT OSI-SAF",
+                "comment": " Sea ice area fraction",
+                "coordinates": "lon lat",
+                "add_offset": 0.0,
+                "scale_factor": 0.009999999776482582,
+                "_FillValue": -128
+              }
+            },
+            "analysed_sst": {
+              "dimensions": [
+                "time",
+                "lat",
+                "lon"
+              ],
+              "shape": [
+                104,
+                3600,
+                7200
+              ],
+              "chunks": [
+                3,
+                450,
+                900
+              ],
+              "dtype": "int16",
+              "attributes": {
+                "long_name": "analysed sea surface temperature",
+                "standard_name": "sea_surface_foundation_temperature",
+                "units": "kelvin",
+                "valid_min": -300,
+                "valid_max": 4500,
+                "source": "REMSS-L2P-AMSRE, UPA-L2P-ATS_NR_2P, NAVO-L2P-AVHRR18_G, NAVO-L2P-AVHRR19_G, EUR-L2P-AVHRR_METOP_A, SEVIRI_SST-OSISAF-L3C-v1.0, REMSS_L2P-TMI, GOES13-OSISAF-L3C-v1.0",
+                "reference": "C.J. Donlon, M. Martin, J.D. Stark, J. Roberts-Jones, E. Fiedler, W. Wimmer. The operational sea surface temperature and sea ice analysis (OSTIA) system. Remote Sensing Environ., 116 (2012), pp. 140u2013158 http://dx.doi.org/10.1016/j.rse.2010.10.017",
+                "comment": " OSTIA foundation SST",
+                "coordinates": "lon lat",
+                "add_offset": 273.1499938964844,
+                "scale_factor": 0.009999999776482582,
+                "_FillValue": -32768
+              }
+            },
+            "mask": {
+              "dimensions": [
+                "time",
+                "lat",
+                "lon"
+              ],
+              "shape": [
+                104,
+                3600,
+                7200
+              ],
+              "chunks": [
+                5,
+                450,
+                900
+              ],
+              "dtype": "int8",
+              "attributes": {
+                "long_name": "land sea ice lake bit mask",
+                "flag_meanings": "water land optional_lake_surface sea_ice optional_river_surface",
+                "comment": " Land/ open ocean/ sea ice /lake mask",
+                "valid_min": 1,
+                "valid_max": 31,
+                "flag_masks": [
+                  1,
+                  2,
+                  4,
+                  8,
+                  16
+                ],
+                "source": "NAVOCEANO_landmask_v1.0 EUMETSAT_OSI-SAF_icemask ARCLake_lakemask",
+                "coordinates": "lon lat",
+                "_FillValue": -128
+              }
+            },
+            "lon": {
+              "dimensions": [
+                "lon"
+              ],
+              "shape": [
+                7200
+              ],
+              "chunks": [
+                7200
+              ],
+              "dtype": "float32",
+              "attributes": {
+                "long_name": "longitude",
+                "standard_name": "longitude",
+                "axis": "X",
+                "units": "degrees_east",
+                "valid_min": -180.0,
+                "valid_max": 180.0,
+                "comment": " Longitude geographical coordinates,WGS84 projection",
+                "_FillValue": "AAAAAAAA+H8="
+              }
+            },
+            "lat": {
+              "dimensions": [
+                "lat"
+              ],
+              "shape": [
+                3600
+              ],
+              "chunks": [
+                3600
+              ],
+              "dtype": "float32",
+              "attributes": {
+                "long_name": "latitude",
+                "standard_name": "latitude",
+                "axis": "Y",
+                "units": "degrees_north",
+                "valid_min": -90.0,
+                "valid_max": 90.0,
+                "comment": " Latitude geographical coordinates,WGS84 projection",
+                "_FillValue": "AAAAAAAA+H8="
+              }
+            },
+            "time": {
+              "dimensions": [
+                "time"
+              ],
+              "shape": [
+                104
+              ],
+              "chunks": [
+                40
+              ],
+              "dtype": "int32",
+              "attributes": {
+                "long_name": "reference time of sst field",
+                "standard_name": "time",
+                "axis": "T",
+                "comment": " ",
+                "units": "seconds since 1981-01-01",
+                "calendar": "proleptic_gregorian"
+              }
+            }
+          }
+        }
+      ]
+    }
+  ]
+}
