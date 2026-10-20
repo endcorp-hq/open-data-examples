@@ -1,6 +1,6 @@
 # END Sea Surface Temperature Collections
 
-Dataset documentation, updated October 19, 2026. END converts six upstream
+Dataset documentation, updated October 20, 2026. END converts six upstream
 sea surface temperature (SST) collections into versioned, cloud-readable Zarr V3
 arrays using Icechunk. The upstream agencies produce the analyses; END maintains
 the conversion, quality metadata and access examples.
@@ -9,19 +9,21 @@ the conversion, quality metadata and access examples.
 tutorial for a planned public release. There is no public END dataset endpoint
 yet. Publication depends on hosting setup, source-rights checks and release
 validation. This page does not announce an active AWS sponsorship or Registry
-listing. The first release is scoped to the six collections below.
+listing. The proposed scope is the six collections below; OSTIA remains excluded until
+historical redistribution rights are confirmed.
 
 ## Collections and measured coverage
 
-Coverage is the October 19 inventory, not an assertion that every intervening
-calendar date exists. Current active collections reach October 17, 2026.
+Coverage is a dated measurement, not an assertion that every intervening
+calendar date exists. GPB05 was refreshed on October 20 and reaches October 19;
+other rows retain the October 19 inventory through October 17.
 
 | Collection | Producer | Nominal grid | Earliest stored date | Latest stored date | Unique dates | Missing calendar dates |
 | --- | --- | --- | --- | --- | --- | --- |
 | CMC V2 | Canadian Meteorological Centre | 0.2° | 1991-09-01 | 2017-03-17 | 9,330 | 0 |
 | CMC V3 | Canadian Meteorological Centre | 0.1° | 2016-01-01 | 2026-10-17 | 3,943 | 0 |
 | GAMSSA | Australian Bureau of Meteorology | approximately 28 km | 2008-07-23 | 2026-10-17 | 6,654 | 7 |
-| GPB05 night | NOAA Office of Satellite Products and Operations | approximately 5 km | 2014-06-02 | 2026-10-17 | 4,401 | 120 |
+| GPB05 night | NOAA Office of Satellite Products and Operations | approximately 5 km | 2014-06-02 | 2026-10-19 | 4,403 | 120 |
 | OISST V2.1 | NOAA National Centers for Environmental Information | 0.25° | 1981-09-01 | 2026-10-17 | 16,483 | 0 |
 | OSTIA | UK Met Office | 0.05° | 2007-01-01 | 2026-10-17 | 7,206 | 24 |
 
@@ -37,7 +39,8 @@ can contain partial historical notes; `known_source_field_gaps` is the explicit
 field-level ledger, separate from `missing_calendar_dates` for absent whole days.
 Physical release size and object count will be published with the first release.
 The October 20 [operational capacity measurement](capacity.json) counts 297.96 GB
-across 2,260,980 current objects, including repository history. This is a sizing
+across 2,260,980 current objects, including repository history, before the GPB05
+repair added new history. This is a sizing
 baseline, not the eventual public release size; noncurrent object versions and
 Bronze/Gold are excluded. The annualized recent-modification estimate is a
 planning scenario, not measured net growth.
@@ -88,20 +91,18 @@ are not interchangeable and can estimate different SST definitions.
 - GAMSSA sea-ice fields were absent upstream on March 26–30, May 6 and September
   23, 2026. Those cells carry the source fill sentinel and decode as missing;
   no sea-ice measurements were invented.
-- GPB05 historical metadata has been checked for all 4,401 retained dates.
-  The original error field has a suspect nonzero offset on 1,316 dates, including
-  reversions in early 2018. Complete SST/error maps on 24 selected dates match
-  their sources, but that preserves the historical error, and later repacked
-  values conflict with the retained valid range. GPB05 remains excluded pending
-  scientific correction and validation; do not use its historical error field
-  as a qualified uncertainty estimate.
+- GPB05 uncertainty has been corrected under an explicit END zero-offset
+  policy. All 4,402 historical error maps were rebuilt from pinned source files
+  and verified after reopening. Historical replay and the October 19 append
+  passed, producing 4,403 unique dates. This is an END correction, not a
+  NOAA-approved reprocessing. Public-export validation remains a launch gate.
 - Calendar gaps listed in the inventory are absent from the retained source
   inventory too. A complete conversion is not a guarantee of gap-free upstream
   observations. Do not fill gaps implicitly.
 
-The [GPB05 historical validation results](gpb-historical-validation.json) distinguish
-conversion fidelity from scientific release qualification. The checks cover
-all source metadata and 24 complete daily maps, not every historical value.
+The [GPB05 correction report](gpb-error-correction.md) records full historical
+error-field verification and production replay. The [original audit](gpb-historical-validation.json)
+records the earlier uncorrected snapshot and its sampled SST comparisons.
 
 ## Reader and tutorial
 

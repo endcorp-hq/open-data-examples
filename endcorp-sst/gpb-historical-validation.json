@@ -90,5 +90,8 @@
     "retained_hour_utc": 0,
     "same_calendar_date": true
   },
-  "production_modified": false
+  "production_modified": false,
+  "snapshot_id": "Z1DFNBWR3MSFMX2NTMZ0",
+  "scope": "Original uncorrected snapshot; this result does not describe a later corrected archive.",
+  "superseded_by": "gpb-error-correction.json"
 }

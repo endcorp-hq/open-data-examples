@@ -55,6 +55,11 @@ and the dates and spatial region used. State that END converted the source
 arrays into Icechunk-backed Zarr V3. For results made with this repository,
 also record its commit and dependency versions.
 
+For corrected GPB05 uncertainty, also identify END policy
+`end-gpb05-analysis-error-zero-offset-v1` and the
+[correction report](gpb-error-correction.md). Do not attribute that correction
+to NOAA or imply producer approval.
+
 Keep preliminary/final revision information and report missing dates or fields.
 The [dataset guide](README.md) explains duplicate-date selection, OSTIA group
 overlap and the current quality limitations. No blanket data license is asserted

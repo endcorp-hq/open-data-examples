@@ -762,8 +762,8 @@
     {
       "dataset": "gpb_5km",
       "date_start": "2014-06-02",
-      "date_end": "2026-10-17",
-      "unique_dates": 4401,
+      "date_end": "2026-10-19",
+      "unique_dates": 4403,
       "missing_calendar_dates": [
         "2014-06-13",
         "2014-06-14",
@@ -898,8 +898,8 @@
           "group": "/",
           "zarr_format": 3,
           "date_start": "2014-06-02",
-          "date_end": "2026-10-17",
-          "unique_dates": 4401,
+          "date_end": "2026-10-19",
+          "unique_dates": 4403,
           "duplicates": {},
           "arrays": {
             "analysed_sst": {
@@ -909,7 +909,7 @@
                 "lon"
               ],
               "shape": [
-                4401,
+                4403,
                 3600,
                 7200
               ],
@@ -941,7 +941,7 @@
                 "lon"
               ],
               "shape": [
-                4401,
+                4403,
                 3600,
                 7200
               ],
@@ -958,29 +958,11 @@
                 "valid_max": 500,
                 "comment": "Estimate of internal analysis accuracy",
                 "coordinates": "lon lat",
-                "add_offset": 273.1499938964844,
+                "add_offset": 0.0,
                 "scale_factor": 0.009999999776482582,
-                "_FillValue": -32768
-              }
-            },
-            "time": {
-              "dimensions": [
-                "time"
-              ],
-              "shape": [
-                4401
-              ],
-              "chunks": [
-                8
-              ],
-              "dtype": "int32",
-              "attributes": {
-                "long_name": "reference time of sst field",
-                "standard_name": "time",
-                "axis": "T",
-                "comment": "Nominal time of Level 4 analysis",
-                "units": "seconds since 1981-01-01 00:00:00",
-                "calendar": "Gregorian"
+                "_FillValue": -32768,
+                "end_correction_policy": "end-gpb05-analysis-error-zero-offset-v1",
+                "end_correction_source_snapshot": "MABE552GQQX2G2EGKDX0"
               }
             },
             "lat": {
@@ -1005,76 +987,6 @@
                 "_FillValue": "AAAAAAAA+H8="
               }
             },
-            "preliminary": {
-              "dimensions": [
-                "time"
-              ],
-              "shape": [
-                4401
-              ],
-              "chunks": [
-                8
-              ],
-              "dtype": "int8",
-              "attributes": {
-                "long_name": "Source file is preliminary",
-                "description": "True when the source NetCDF file is a preliminary/NRT daily artifact. A later final daily file for the same time value upserts this flag to false.",
-                "dtype": "bool"
-              }
-            },
-            "sea_ice_fraction": {
-              "dimensions": [
-                "time",
-                "lat",
-                "lon"
-              ],
-              "shape": [
-                4401,
-                3600,
-                7200
-              ],
-              "chunks": [
-                1,
-                600,
-                1200
-              ],
-              "dtype": "int8",
-              "attributes": {
-                "long_name": "sea ice fraction",
-                "standard_name": "sea_ice_area_fraction",
-                "units": "1",
-                "valid_min": 0,
-                "valid_max": 100,
-                "source": "NCEP 1/12th degree ice mask",
-                "comment": " Percentage of ice",
-                "coordinates": "lon lat",
-                "add_offset": 0.0,
-                "scale_factor": 0.009999999776482582,
-                "_FillValue": -128
-              }
-            },
-            "lon": {
-              "dimensions": [
-                "lon"
-              ],
-              "shape": [
-                7200
-              ],
-              "chunks": [
-                7200
-              ],
-              "dtype": "float32",
-              "attributes": {
-                "long_name": "longitude",
-                "standard_name": "longitude",
-                "units": "degrees_east",
-                "axis": "X",
-                "valid_min": -180.0,
-                "valid_max": 180.0,
-                "comment": "equirectangular projection",
-                "_FillValue": "AAAAAAAA+H8="
-              }
-            },
             "mask": {
               "dimensions": [
                 "time",
@@ -1082,7 +994,7 @@
                 "lon"
               ],
               "shape": [
-                4401,
+                4403,
                 3600,
                 7200
               ],
@@ -1108,16 +1020,109 @@
                 "coordinates": "lon lat",
                 "_FillValue": 0
               }
+            },
+            "sea_ice_fraction": {
+              "dimensions": [
+                "time",
+                "lat",
+                "lon"
+              ],
+              "shape": [
+                4403,
+                3600,
+                7200
+              ],
+              "chunks": [
+                1,
+                600,
+                1200
+              ],
+              "dtype": "int8",
+              "attributes": {
+                "long_name": "sea ice fraction",
+                "standard_name": "sea_ice_area_fraction",
+                "units": "1",
+                "valid_min": 0,
+                "valid_max": 100,
+                "source": "NCEP 1/12th degree ice mask",
+                "comment": " Percentage of ice",
+                "coordinates": "lon lat",
+                "add_offset": 0.0,
+                "scale_factor": 0.009999999776482582,
+                "_FillValue": -128
+              }
+            },
+            "time": {
+              "dimensions": [
+                "time"
+              ],
+              "shape": [
+                4403
+              ],
+              "chunks": [
+                8
+              ],
+              "dtype": "int32",
+              "attributes": {
+                "long_name": "reference time of sst field",
+                "standard_name": "time",
+                "axis": "T",
+                "comment": "Nominal time of Level 4 analysis",
+                "units": "seconds since 1981-01-01 00:00:00",
+                "calendar": "Gregorian"
+              }
+            },
+            "preliminary": {
+              "dimensions": [
+                "time"
+              ],
+              "shape": [
+                4403
+              ],
+              "chunks": [
+                8
+              ],
+              "dtype": "int8",
+              "attributes": {
+                "long_name": "Source file is preliminary",
+                "description": "True when the source NetCDF file is a preliminary/NRT daily artifact. A later final daily file for the same time value upserts this flag to false.",
+                "dtype": "bool"
+              }
+            },
+            "lon": {
+              "dimensions": [
+                "lon"
+              ],
+              "shape": [
+                7200
+              ],
+              "chunks": [
+                7200
+              ],
+              "dtype": "float32",
+              "attributes": {
+                "long_name": "longitude",
+                "standard_name": "longitude",
+                "units": "degrees_east",
+                "axis": "X",
+                "valid_min": -180.0,
+                "valid_max": 180.0,
+                "comment": "equirectangular projection",
+                "_FillValue": "AAAAAAAA+H8="
+              }
             }
           }
         }
       ],
+      "measured_at": "2026-10-20T18:09:09.566582+00:00",
       "historical_validation": {
-        "status": "blocked_scientific_release_qualification",
-        "report": "gpb-historical-validation.json",
-        "metadata_dates": 4401,
-        "complete_field_dates": 24,
-        "affected_source_offset_dates": 1316
+        "policy": "end-gpb05-analysis-error-zero-offset-v1",
+        "repaired_maps": 4402,
+        "all_error_maps_reopened": true,
+        "latest_day_fields_passed": true,
+        "report": "gpb-error-correction.json",
+        "remaining_calendar_gaps": 120,
+        "full_public_export_validation": "pending"
       }
     },
     {
@@ -2032,5 +2037,7 @@
         }
       ]
     }
-  ]
+  ],
+  "updated_at": "2026-10-20T18:09:09.566582+00:00",
+  "measurement_scope": "Original inventory generated_at retained; GPB05 refreshed at its measured_at after correction and production replay."
 }
