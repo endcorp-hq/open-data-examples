@@ -88,12 +88,20 @@ are not interchangeable and can estimate different SST definitions.
 - GAMSSA sea-ice fields were absent upstream on March 26–30, May 6 and September
   23, 2026. Those cells carry the source fill sentinel and decode as missing;
   no sea-ice measurements were invented.
-- GPB05 retains older packing for `analysis_error`. Latest decoded samples match
-  source values, but retained packed valid-range metadata needs correction and
-  historical validation before public release.
+- GPB05 historical metadata has been checked for all 4,401 retained dates.
+  The original error field has a suspect nonzero offset on 1,316 dates, including
+  reversions in early 2018. Complete SST/error maps on 24 selected dates match
+  their sources, but that preserves the historical error, and later repacked
+  values conflict with the retained valid range. GPB05 remains excluded pending
+  scientific correction and validation; do not use its historical error field
+  as a qualified uncertainty estimate.
 - Calendar gaps listed in the inventory are absent from the retained source
   inventory too. A complete conversion is not a guarantee of gap-free upstream
   observations. Do not fill gaps implicitly.
+
+The [GPB05 historical validation results](gpb-historical-validation.json) distinguish
+conversion fidelity from scientific release qualification. The checks cover
+all source metadata and 24 complete daily maps, not every historical value.
 
 ## Reader and tutorial
 

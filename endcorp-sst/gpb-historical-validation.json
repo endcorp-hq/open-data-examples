@@ -1,0 +1,94 @@
+{
+  "checked_at": "2026-10-20T15:44:18.599546+00:00",
+  "collection": "gpb_5km",
+  "source_doi": "10.5067/GHGPN-4FO02",
+  "status": "blocked_scientific_release_qualification",
+  "metadata_dates_inspected": 4401,
+  "nonzero_offset_source_dates": 1316,
+  "zero_offset_source_dates": 3085,
+  "offset_runs_in_retained_date_order": [
+    {
+      "add_offset": 273.1499938964844,
+      "date_start": "2014-06-02",
+      "date_end": "2017-12-27",
+      "retained_dates": 1286
+    },
+    {
+      "add_offset": 0.0,
+      "date_start": "2017-12-28",
+      "date_end": "2018-01-09",
+      "retained_dates": 13
+    },
+    {
+      "add_offset": 273.1499938964844,
+      "date_start": "2018-01-10",
+      "date_end": "2018-02-07",
+      "retained_dates": 29
+    },
+    {
+      "add_offset": 0.0,
+      "date_start": "2018-02-09",
+      "date_end": "2018-02-20",
+      "retained_dates": 12
+    },
+    {
+      "add_offset": 273.1499938964844,
+      "date_start": "2018-02-21",
+      "date_end": "2018-02-21",
+      "retained_dates": 1
+    },
+    {
+      "add_offset": 0.0,
+      "date_start": "2018-02-22",
+      "date_end": "2026-10-17",
+      "retained_dates": 3060
+    }
+  ],
+  "field_comparison": {
+    "selected_dates": 24,
+    "fields_per_date": 2,
+    "cells_compared": 1244160000,
+    "missing_mask_mismatches": 0,
+    "values_outside_tolerance": 0,
+    "max_absolute_difference_kelvin": 1.862645149230957e-09,
+    "all_selected_fields_pass_fidelity": true,
+    "source_error_decoded_range_kelvin": [
+      0.03999999910593033,
+      274.3299938701093
+    ]
+  },
+  "field_dates": [
+    "2014-06-02",
+    "2014-07-01",
+    "2015-07-01",
+    "2016-07-01",
+    "2017-07-01",
+    "2017-12-27",
+    "2017-12-28",
+    "2018-01-09",
+    "2018-01-10",
+    "2018-02-07",
+    "2018-02-09",
+    "2018-02-20",
+    "2018-02-21",
+    "2018-02-22",
+    "2018-07-01",
+    "2019-07-01",
+    "2020-07-01",
+    "2021-07-01",
+    "2022-07-01",
+    "2023-07-01",
+    "2024-07-01",
+    "2025-07-01",
+    "2026-07-01",
+    "2026-10-17"
+  ],
+  "limits": "Metadata covers every retained date. Complete-field comparison covers only the listed dates and analysed_sst/analysis_error, not all historical values or variables. Source and retained scientific metadata require correction before release.",
+  "source_time_normalization": {
+    "sampled_date": "2026-10-17",
+    "source_nominal_hour_utc": 12,
+    "retained_hour_utc": 0,
+    "same_calendar_date": true
+  },
+  "production_modified": false
+}

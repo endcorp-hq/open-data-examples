@@ -1111,7 +1111,14 @@
             }
           }
         }
-      ]
+      ],
+      "historical_validation": {
+        "status": "blocked_scientific_release_qualification",
+        "report": "gpb-historical-validation.json",
+        "metadata_dates": 4401,
+        "complete_field_dates": 24,
+        "affected_source_offset_dates": 1316
+      }
     },
     {
       "dataset": "oisst",

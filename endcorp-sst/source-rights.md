@@ -1,6 +1,6 @@
 # Source rights and citation guide
 
-Updated October 19, 2026. END converts the source analyses into versioned Zarr V3
+Updated October 20, 2026. END converts the source analyses into versioned Zarr V3
 and Icechunk storage. The original agencies remain the data producers. The
 repository's MIT license covers END-authored examples and documentation; it
 does not replace upstream data terms or retained source notices.
@@ -60,26 +60,29 @@ The [dataset guide](README.md) explains duplicate-date selection, OSTIA group
 overlap and the current quality limitations. No blanket data license is asserted
 for all six collections; each public release must retain its source terms.
 
-## Historical OSTIA confirmation packet (October 20)
+## Historical OSTIA confirmation (October 20)
 
 The [Met Office marine data service](https://www.metoffice.gov.uk/services/data/met-office-marine-data-service)
-currently identifies OSTIA Foundation SST and Sea-Ice as CC BY. Its
-[order form](https://www.metoffice.gov.uk/api/assets/file/data-product-order-formpdf?prefix=assets)
-provides the producer acknowledgement. This is evidence for that delivery
-service, not proof that the complete PO.DAAC/retained historical archive has
-been relicensed. The [Copernicus citation guidance](https://help.marine.copernicus.eu/en/articles/4444611-citing-copernicus-marine-products-and-services)
-distinguishes redistribution from derivative works and directs users to the
-applicable licence agreement.
+links OSTIA Foundation SST and Sea-Ice to [CC BY 4.0](https://creativecommons.org/licenses/by/4.0/).
+Its linked [product sheet](https://www.metoffice.gov.uk/api/assets/file/ostia-data-product-sheetpdf?prefix=assets)
+describes daily coverage from January 1, 2007 and the filename pattern of our
+retained operational files. This strongly supports historical coverage under
+the current offer, but does not explicitly address files previously supplied
+through PO.DAAC with older notices.
 
-Before releasing historical OSTIA, obtain confirmation of the terms covering
-our operational product (`OSTIA-UKMO-L4-GLOB-v2.0`, DOI
-`10.5067/GHOST-4FK02`) across the retained dates, including older GMES-labelled
-files. The question is permission to redistribute unchanged scientific values
-in Zarr V3/Icechunk, with attribution, for public and commercial use. Ask whether
-current CC BY terms cover those historical files, which licence version applies,
-and which Met Office/Copernicus notices must accompany each period. Do not
-substitute the separate reprocessed OSTIA product's terms or DOI.
+Five inspected source dates carry GMES notices (2007, 2013 and 2016), a CMEMS
+notice (2020), and the Copernicus Marine SLA (2026). These samples identify
+notice families, not every transition date. The operational product remains
+`OSTIA-UKMO-L4-GLOB-v2.0`, DOI `10.5067/GHOST-4FK02`.
 
-Until this is resolved, OSTIA remains excluded from any approved release. A
-release of other qualified collections can proceed separately; the Registry
-entry must then name only the collections actually available.
+The [Copernicus Marine agreement](https://marine.copernicus.eu/user-corner/service-commitments-and-licence)
+permits original-product redistribution and modified-product distribution. It
+requires attribution, relevant DOIs and traceability records. Its definitions
+distinguish unchanged-format redistribution from modified products; our Zarr
+conversion needs the appropriate acknowledgement and classification.
+
+Historical applicability and the required notices remain subject to provider
+confirmation. OSTIA is excluded from an approved release until that is recorded.
+Do not substitute the separate reprocessed OSTIA product's terms or DOI. Other
+qualified collections can proceed separately; a Registry entry must name only
+collections actually available.
