@@ -1,0 +1,216 @@
+{
+  "observed_at": "2026-10-20T10:22:07.685765+00:00",
+  "scope": "Current S3 objects under six operational Icechunk prefixes; includes repository history and unreferenced objects, excludes Bronze, Gold, noncurrent versions and incomplete multipart uploads. Listing is not an atomic snapshot.",
+  "datasets": [
+    {
+      "dataset": "cmc_v2",
+      "bytes": 19568288342,
+      "objects": 86904,
+      "last_30_days_bytes": 0,
+      "last_30_days_objects": 0,
+      "components": {
+        "chunks": {
+          "bytes": 19337430989,
+          "objects": 84561
+        },
+        "manifests": {
+          "bytes": 227413184,
+          "objects": 1638
+        },
+        "overwritten": {
+          "bytes": 2059172,
+          "objects": 234
+        },
+        "repo": {
+          "bytes": 17293,
+          "objects": 1
+        },
+        "snapshots": {
+          "bytes": 931714,
+          "objects": 235
+        },
+        "transactions": {
+          "bytes": 435990,
+          "objects": 235
+        }
+      },
+      "listing_complete": true
+    },
+    {
+      "dataset": "cmc_v3",
+      "bytes": 31696715074,
+      "objects": 94017,
+      "last_30_days_bytes": 696507045,
+      "last_30_days_objects": 3286,
+      "components": {
+        "chunks": {
+          "bytes": 31240909741,
+          "objects": 89221
+        },
+        "manifests": {
+          "bytes": 439102543,
+          "objects": 2979
+        },
+        "overwritten": {
+          "bytes": 13692777,
+          "objects": 606
+        },
+        "repo": {
+          "bytes": 45330,
+          "objects": 1
+        },
+        "snapshots": {
+          "bytes": 2393058,
+          "objects": 605
+        },
+        "transactions": {
+          "bytes": 571625,
+          "objects": 605
+        }
+      },
+      "listing_complete": true
+    },
+    {
+      "dataset": "gamssa",
+      "bytes": 8979987859,
+      "objects": 56829,
+      "last_30_days_bytes": 641415838,
+      "last_30_days_objects": 5839,
+      "components": {
+        "chunks": {
+          "bytes": 8764483008,
+          "objects": 52533
+        },
+        "manifests": {
+          "bytes": 204061059,
+          "objects": 2872
+        },
+        "overwritten": {
+          "bytes": 8596653,
+          "objects": 475
+        },
+        "repo": {
+          "bytes": 36234,
+          "objects": 1
+        },
+        "snapshots": {
+          "bytes": 2462341,
+          "objects": 474
+        },
+        "transactions": {
+          "bytes": 348564,
+          "objects": 474
+        }
+      },
+      "listing_complete": true
+    },
+    {
+      "dataset": "gpb_5km",
+      "bytes": 89511017824,
+      "objects": 555293,
+      "last_30_days_bytes": 969705984,
+      "last_30_days_objects": 4206,
+      "components": {
+        "chunks": {
+          "bytes": 84493624986,
+          "objects": 544439
+        },
+        "manifests": {
+          "bytes": 4942995603,
+          "objects": 6694
+        },
+        "overwritten": {
+          "bytes": 65834647,
+          "objects": 1387
+        },
+        "repo": {
+          "bytes": 84697,
+          "objects": 1
+        },
+        "snapshots": {
+          "bytes": 5900470,
+          "objects": 1386
+        },
+        "transactions": {
+          "bytes": 2577421,
+          "objects": 1386
+        }
+      },
+      "listing_complete": true
+    },
+    {
+      "dataset": "oisst",
+      "bytes": 34708511095,
+      "objects": 123023,
+      "last_30_days_bytes": 927781960,
+      "last_30_days_objects": 4623,
+      "components": {
+        "chunks": {
+          "bytes": 33465731988,
+          "objects": 112811
+        },
+        "manifests": {
+          "bytes": 1186100994,
+          "objects": 6694
+        },
+        "overwritten": {
+          "bytes": 51022009,
+          "objects": 1173
+        },
+        "repo": {
+          "bytes": 81121,
+          "objects": 1
+        },
+        "snapshots": {
+          "bytes": 4792350,
+          "objects": 1172
+        },
+        "transactions": {
+          "bytes": 782633,
+          "objects": 1172
+        }
+      },
+      "listing_complete": true
+    },
+    {
+      "dataset": "ostia",
+      "bytes": 113492338298,
+      "objects": 1344914,
+      "last_30_days_bytes": 1456889227,
+      "last_30_days_objects": 6268,
+      "components": {
+        "chunks": {
+          "bytes": 107152480913,
+          "objects": 1340944
+        },
+        "manifests": {
+          "bytes": 6322480702,
+          "objects": 2531
+        },
+        "overwritten": {
+          "bytes": 8921352,
+          "objects": 480
+        },
+        "repo": {
+          "bytes": 36895,
+          "objects": 1
+        },
+        "snapshots": {
+          "bytes": 3144149,
+          "objects": 479
+        },
+        "transactions": {
+          "bytes": 5274287,
+          "objects": 479
+        }
+      },
+      "listing_complete": true
+    }
+  ],
+  "completed_at": "2026-10-20T10:35:04.008527+00:00",
+  "total_bytes": 297956858492,
+  "total_objects": 2260980,
+  "recent_modified_bytes": 4692300054,
+  "annualized_recent_modified_bytes_scenario": 57089650657,
+  "growth_caveat": "Annualized current-key LastModified bytes are a planning scenario only, not measured net growth or total write traffic: overwrites, deletions, backfills, noncurrent versions and metadata churn distort this proxy."
+}

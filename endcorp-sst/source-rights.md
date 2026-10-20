@@ -59,3 +59,27 @@ Keep preliminary/final revision information and report missing dates or fields.
 The [dataset guide](README.md) explains duplicate-date selection, OSTIA group
 overlap and the current quality limitations. No blanket data license is asserted
 for all six collections; each public release must retain its source terms.
+
+## Historical OSTIA confirmation packet (October 20)
+
+The [Met Office marine data service](https://www.metoffice.gov.uk/services/data/met-office-marine-data-service)
+currently identifies OSTIA Foundation SST and Sea-Ice as CC BY. Its
+[order form](https://www.metoffice.gov.uk/api/assets/file/data-product-order-formpdf?prefix=assets)
+provides the producer acknowledgement. This is evidence for that delivery
+service, not proof that the complete PO.DAAC/retained historical archive has
+been relicensed. The [Copernicus citation guidance](https://help.marine.copernicus.eu/en/articles/4444611-citing-copernicus-marine-products-and-services)
+distinguishes redistribution from derivative works and directs users to the
+applicable licence agreement.
+
+Before releasing historical OSTIA, obtain confirmation of the terms covering
+our operational product (`OSTIA-UKMO-L4-GLOB-v2.0`, DOI
+`10.5067/GHOST-4FK02`) across the retained dates, including older GMES-labelled
+files. The question is permission to redistribute unchanged scientific values
+in Zarr V3/Icechunk, with attribution, for public and commercial use. Ask whether
+current CC BY terms cover those historical files, which licence version applies,
+and which Met Office/Copernicus notices must accompany each period. Do not
+substitute the separate reprocessed OSTIA product's terms or DOI.
+
+Until this is resolved, OSTIA remains excluded from any approved release. A
+release of other qualified collections can proceed separately; the Registry
+entry must then name only the collections actually available.

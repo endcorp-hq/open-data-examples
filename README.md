@@ -39,3 +39,5 @@ small equatorial Pacific region, plots SST and computes a regional anomaly.
 END-authored documentation and example code are [MIT licensed](LICENSE).
 Upstream data and retained source metadata are excluded from that license;
 their product-specific terms and attribution remain applicable.
+
+The [END logo](assets/README.md) is available for the onboarding handoff.

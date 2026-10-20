@@ -36,6 +36,11 @@ a dated pre-release inventory, **not a download manifest**. Stored array attribu
 can contain partial historical notes; `known_source_field_gaps` is the explicit
 field-level ledger, separate from `missing_calendar_dates` for absent whole days.
 Physical release size and object count will be published with the first release.
+The October 20 [operational capacity measurement](capacity.json) counts 297.96 GB
+across 2,260,980 current objects, including repository history. This is a sizing
+baseline, not the eventual public release size; noncurrent object versions and
+Bronze/Gold are excluded. The annualized recent-modification estimate is a
+planning scenario, not measured net growth.
 
 ## Storage and discovery
 
@@ -74,7 +79,7 @@ are not interchangeable and can estimate different SST definitions.
 
 - CMC V3 has four excess rows across three duplicate calendar dates; OISST has
   one excess row; OSTIA has duplicate dates and overlapping coordinate groups.
-  For a single group, select the last stored row for each calendar date, then
+  For a single group, select the last stored row for each exact timestamp, then
   sort by date. Never concatenate overlapping OSTIA groups without an explicit
   coordinate and precedence policy.
 - OSTIA contains two coordinate-signature groups and a legacy 40-day root.
