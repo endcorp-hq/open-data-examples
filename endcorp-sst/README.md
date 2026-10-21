@@ -1,6 +1,6 @@
 # END Sea Surface Temperature Collections
 
-Dataset documentation, updated October 20, 2026. END converts six upstream
+Dataset documentation, updated October 21, 2026. END converts six upstream
 sea surface temperature (SST) collections into versioned, cloud-readable Zarr V3
 arrays using Icechunk. The upstream agencies produce the analyses; END maintains
 the conversion, quality metadata and access examples.
@@ -15,14 +15,15 @@ historical redistribution rights are confirmed.
 ## Collections and measured coverage
 
 Coverage is a dated measurement, not an assertion that every intervening
-calendar date exists. GPB05 was refreshed on October 20 and reaches October 19;
-other rows retain the October 19 inventory through October 17.
+calendar date exists. GAMSSA was measured on October 21 and reaches October 20.
+GPB05 was measured on October 20 and reaches October 19. Other rows retain
+the October 19 inventory through October 17.
 
 | Collection | Producer | Nominal grid | Earliest stored date | Latest stored date | Unique dates | Missing calendar dates |
 | --- | --- | --- | --- | --- | --- | --- |
 | CMC V2 | Canadian Meteorological Centre | 0.2° | 1991-09-01 | 2017-03-17 | 9,330 | 0 |
 | CMC V3 | Canadian Meteorological Centre | 0.1° | 2016-01-01 | 2026-10-17 | 3,943 | 0 |
-| GAMSSA | Australian Bureau of Meteorology | approximately 28 km | 2008-07-23 | 2026-10-17 | 6,654 | 7 |
+| GAMSSA | Australian Bureau of Meteorology | approximately 28 km | 2008-07-23 | 2026-10-20 | 6,664 | 0 |
 | GPB05 night | NOAA Office of Satellite Products and Operations | approximately 5 km | 2014-06-02 | 2026-10-19 | 4,403 | 120 |
 | OISST V2.1 | NOAA National Centers for Environmental Information | 0.25° | 1981-09-01 | 2026-10-17 | 16,483 | 0 |
 | OSTIA | UK Met Office | 0.05° | 2007-01-01 | 2026-10-17 | 7,206 | 24 |
@@ -40,8 +41,7 @@ field-level ledger, separate from `missing_calendar_dates` for absent whole days
 Physical release size and object count will be published with the first release.
 The October 20 [operational capacity measurement](capacity.json) counts 297.96 GB
 across 2,260,980 current objects, including repository history, before the GPB05
-repair added new history. This is a sizing
-baseline, not the eventual public release size; noncurrent object versions and
+and GAMSSA repairs added new history. This is a sizing baseline, not the eventual public release size; noncurrent object versions and
 Bronze/Gold are excluded. The annualized recent-modification estimate is a
 planning scenario, not measured net growth.
 
@@ -103,6 +103,9 @@ are not interchangeable and can estimate different SST definitions.
 The [GPB05 correction report](gpb-error-correction.md) records full historical
 error-field verification and production replay. The [original audit](gpb-historical-validation.json)
 records the earlier uncorrected snapshot and its sampled SST comparisons.
+
+The [GAMSSA recovery report](gamssa-historical-recovery.md) records seven historical days
+recovered from AODN, complete read-back and the remaining sea-ice field omissions.
 
 ## Reader and tutorial
 

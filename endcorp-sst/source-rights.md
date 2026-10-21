@@ -91,3 +91,11 @@ confirmation. OSTIA is excluded from an approved release until that is recorded.
 Do not substitute the separate reprocessed OSTIA product's terms or DOI. Other
 qualified collections can proceed separately; a Registry entry must name only
 collections actually available.
+
+## GAMSSA alternate archive, October 21
+
+Seven historical GAMSSA originals were recovered from AODN. They identify ABOM
+as the producer and carry the same GHRSST free/open notice. Retain the original
+GAMSSA product citation and ABOM attribution above. The
+[recovery ledger](gamssa-historical-recovery.json) records the AODN URLs and
+checksums alongside the conversion evidence.

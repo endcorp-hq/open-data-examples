@@ -467,17 +467,9 @@
     {
       "dataset": "gamssa",
       "date_start": "2008-07-23",
-      "date_end": "2026-10-17",
-      "unique_dates": 6654,
-      "missing_calendar_dates": [
-        "2008-08-27",
-        "2014-09-15",
-        "2014-11-06",
-        "2020-09-18",
-        "2023-08-17",
-        "2023-11-22",
-        "2024-12-15"
-      ],
+      "date_end": "2026-10-20",
+      "unique_dates": 6664,
+      "missing_calendar_dates": [],
       "source_attributes": {
         "id": "GAMSSA_28km-ABOM-L4-GLOB-v01",
         "title": "GAMSSA v1.0 Analysed daily global low resolution foundation sea surface temperature",
@@ -490,146 +482,10 @@
           "group": "/",
           "zarr_format": 3,
           "date_start": "2008-07-23",
-          "date_end": "2026-10-17",
-          "unique_dates": 6654,
+          "date_end": "2026-10-20",
+          "unique_dates": 6664,
           "duplicates": {},
           "arrays": {
-            "analysed_sst": {
-              "dimensions": [
-                "time",
-                "lat",
-                "lon"
-              ],
-              "shape": [
-                6654,
-                720,
-                1440
-              ],
-              "chunks": [
-                10,
-                180,
-                360
-              ],
-              "dtype": "int16",
-              "attributes": {
-                "valid_min": -300,
-                "valid_max": 4500,
-                "units": "kelvin",
-                "long_name": "analysed sea surface temperature",
-                "standard_name": "sea_surface_foundation_temperature",
-                "comment": "Optimally interpolated analysis of SST observations.",
-                "source": "ATS_MET_2P-ESA,AMSRE-REMSS,AVHRR17_G-NAVO,AVHRR18_G-NAVO,AVHRRMTA_G-NAVO,IN_SITU-GTS_BUOYS,IN_SITU-GTS_SHIP,GASP-WSP, NCEP-ICE",
-                "coverage_content_type": "physicalMeasurement",
-                "grid_mapping": "crs",
-                "coordinates": "time lat lon",
-                "add_offset": 273.15000000000003,
-                "scale_factor": 0.01,
-                "_FillValue": -32768
-              }
-            },
-            "lon": {
-              "dimensions": [
-                "lon"
-              ],
-              "shape": [
-                1440
-              ],
-              "chunks": [
-                1440
-              ],
-              "dtype": "float32",
-              "attributes": {
-                "long_name": "longitude",
-                "standard_name": "longitude",
-                "axis": "X",
-                "comment": "Longitudes for locating data",
-                "units": "degrees_east",
-                "coverage_content_type": "coordinate",
-                "valid_min": -180.0,
-                "valid_max": 180.0,
-                "_FillValue": "AAAAAAAAnkc="
-              }
-            },
-            "time": {
-              "dimensions": [
-                "time"
-              ],
-              "shape": [
-                6654
-              ],
-              "chunks": [
-                40
-              ],
-              "dtype": "int32",
-              "attributes": {
-                "long_name": "reference time of SST field",
-                "standard_name": "time",
-                "axis": "T",
-                "comment": "Nominal time because observations are from different sources and are made at different times of the day",
-                "coverage_content_type": "coordinate",
-                "_FillValue": -2147483647,
-                "units": "seconds since 1981-01-01 00:00:00",
-                "calendar": "Standard"
-              }
-            },
-            "mask": {
-              "dimensions": [
-                "time",
-                "lat",
-                "lon"
-              ],
-              "shape": [
-                6654,
-                720,
-                1440
-              ],
-              "chunks": [
-                10,
-                180,
-                360
-              ],
-              "dtype": "int8",
-              "attributes": {
-                "valid_min": 1,
-                "valid_max": 8,
-                "long_name": "sea/land/lake/ice field composite mask",
-                "comment": "b0: 1 = grid cell is open sea water, b1: 1 = land is present in this grid cell, b2: 1 = lake surface is present in this grid cell, b3: 1 = sea ice is present in this grid cell, b4-b7: reserved for future grid mask data",
-                "source": "Bureau of Meteorology's legacy 1/12 degree resolution topography (glbtopog) file.",
-                "flag_meanings": "water land optional_lake_surface sea-ice",
-                "grid_mapping": "crs",
-                "flag_masks": [
-                  1,
-                  2,
-                  4,
-                  8
-                ],
-                "coordinates": "time lat lon",
-                "_FillValue": -128
-              }
-            },
-            "lat": {
-              "dimensions": [
-                "lat"
-              ],
-              "shape": [
-                720
-              ],
-              "chunks": [
-                720
-              ],
-              "dtype": "float32",
-              "attributes": {
-                "long_name": "latitude",
-                "standard_name": "latitude",
-                "axis": "Y",
-                "comment": "Latitudes for locating data",
-                "valid_min": -90.0,
-                "valid_max": 90.0,
-                "units": "degrees_north",
-                "coverage_content_type": "coordinate",
-                "_FillValue": "AAAAAAAAnkc="
-              }
-            },
             "analysis_error": {
               "dimensions": [
                 "time",
@@ -637,7 +493,7 @@
                 "lon"
               ],
               "shape": [
-                6654,
+                6664,
                 720,
                 1440
               ],
@@ -668,7 +524,7 @@
                 "lon"
               ],
               "shape": [
-                6654,
+                6664,
                 720,
                 1440
               ],
@@ -703,12 +559,47 @@
                 }
               }
             },
+            "mask": {
+              "dimensions": [
+                "time",
+                "lat",
+                "lon"
+              ],
+              "shape": [
+                6664,
+                720,
+                1440
+              ],
+              "chunks": [
+                10,
+                180,
+                360
+              ],
+              "dtype": "int8",
+              "attributes": {
+                "valid_min": 1,
+                "valid_max": 8,
+                "long_name": "sea/land/lake/ice field composite mask",
+                "comment": "b0: 1 = grid cell is open sea water, b1: 1 = land is present in this grid cell, b2: 1 = lake surface is present in this grid cell, b3: 1 = sea ice is present in this grid cell, b4-b7: reserved for future grid mask data",
+                "source": "Bureau of Meteorology's legacy 1/12 degree resolution topography (glbtopog) file.",
+                "flag_meanings": "water land optional_lake_surface sea-ice",
+                "grid_mapping": "crs",
+                "flag_masks": [
+                  1,
+                  2,
+                  4,
+                  8
+                ],
+                "coordinates": "time lat lon",
+                "_FillValue": -128
+              }
+            },
             "preliminary": {
               "dimensions": [
                 "time"
               ],
               "shape": [
-                6654
+                6664
               ],
               "chunks": [
                 9
@@ -720,12 +611,90 @@
                 "dtype": "bool"
               }
             },
+            "analysed_sst": {
+              "dimensions": [
+                "time",
+                "lat",
+                "lon"
+              ],
+              "shape": [
+                6664,
+                720,
+                1440
+              ],
+              "chunks": [
+                10,
+                180,
+                360
+              ],
+              "dtype": "int16",
+              "attributes": {
+                "valid_min": -300,
+                "valid_max": 4500,
+                "units": "kelvin",
+                "long_name": "analysed sea surface temperature",
+                "standard_name": "sea_surface_foundation_temperature",
+                "comment": "Optimally interpolated analysis of SST observations.",
+                "source": "ATS_MET_2P-ESA,AMSRE-REMSS,AVHRR17_G-NAVO,AVHRR18_G-NAVO,AVHRRMTA_G-NAVO,IN_SITU-GTS_BUOYS,IN_SITU-GTS_SHIP,GASP-WSP, NCEP-ICE",
+                "coverage_content_type": "physicalMeasurement",
+                "grid_mapping": "crs",
+                "coordinates": "time lat lon",
+                "add_offset": 273.15000000000003,
+                "scale_factor": 0.01,
+                "_FillValue": -32768
+              }
+            },
+            "time": {
+              "dimensions": [
+                "time"
+              ],
+              "shape": [
+                6664
+              ],
+              "chunks": [
+                40
+              ],
+              "dtype": "int32",
+              "attributes": {
+                "long_name": "reference time of SST field",
+                "standard_name": "time",
+                "axis": "T",
+                "comment": "Nominal time because observations are from different sources and are made at different times of the day",
+                "coverage_content_type": "coordinate",
+                "_FillValue": -2147483647,
+                "units": "seconds since 1981-01-01 00:00:00",
+                "calendar": "Standard"
+              }
+            },
+            "lat": {
+              "dimensions": [
+                "lat"
+              ],
+              "shape": [
+                720
+              ],
+              "chunks": [
+                720
+              ],
+              "dtype": "float32",
+              "attributes": {
+                "long_name": "latitude",
+                "standard_name": "latitude",
+                "axis": "Y",
+                "comment": "Latitudes for locating data",
+                "valid_min": -90.0,
+                "valid_max": 90.0,
+                "units": "degrees_north",
+                "coverage_content_type": "coordinate",
+                "_FillValue": "AAAAAAAAnkc="
+              }
+            },
             "crs": {
               "dimensions": [
                 "time"
               ],
               "shape": [
-                6654
+                6664
               ],
               "chunks": [
                 40
@@ -737,6 +706,29 @@
                 "semi_major_axis": 6379137.0,
                 "inverse_flattening": 298.257223563,
                 "epsg_code": "EPSG:4326"
+              }
+            },
+            "lon": {
+              "dimensions": [
+                "lon"
+              ],
+              "shape": [
+                1440
+              ],
+              "chunks": [
+                1440
+              ],
+              "dtype": "float32",
+              "attributes": {
+                "long_name": "longitude",
+                "standard_name": "longitude",
+                "axis": "X",
+                "comment": "Longitudes for locating data",
+                "units": "degrees_east",
+                "coverage_content_type": "coordinate",
+                "valid_min": -180.0,
+                "valid_max": 180.0,
+                "_FillValue": "AAAAAAAAnkc="
               }
             }
           }
@@ -757,6 +749,20 @@
           "decoded_representation": "CF missing value",
           "evidence": "Source-file inspection and canonical repair read-back, 2026-10-19. All seven known source omissions are included; copied array attributes retain the earlier September-only repair note."
         }
+      },
+      "measured_at": "2026-10-21T16:07:22.963558+00:00",
+      "historical_recovery": {
+        "date": "2026-10-21",
+        "recovered_dates": [
+          "2008-08-27",
+          "2014-09-15",
+          "2014-11-06",
+          "2020-09-18",
+          "2023-08-17",
+          "2023-11-22",
+          "2024-12-15"
+        ],
+        "report": "gamssa-historical-recovery.json"
       }
     },
     {
@@ -2038,6 +2044,6 @@
       ]
     }
   ],
-  "updated_at": "2026-10-20T18:09:09.566582+00:00",
-  "measurement_scope": "Original inventory generated_at retained; GPB05 refreshed at its measured_at after correction and production replay."
+  "updated_at": "2026-10-21T16:07:22.963558+00:00",
+  "measurement_scope": "Original inventory generated_at retained; GPB05 and GAMSSA refreshed at their individual measured_at timestamps after verified repairs."
 }
